@@ -5,8 +5,8 @@ View notes on Notion [here](https://boiling-aftermath-44e.notion.site/Machine-Le
 
 ## Who am I and why am I doing this?
 
-I am a university student involved in AI research. I plan to keep myself up-to-speed with the ML landscape by reading up on at least one paper every week. 
-As I am still an undergraduate, do expect my notes to be easy-to-digest and I'll make sure to cover as much theory as well as technical aspects of papers.
+Hi, I am a university student involved in AI research. I plan to keep myself up-to-speed with the ML landscape by reading up on at least one paper every week. \
+Do expect my notes to be easy-to-digest and I'll make sure to cover as much theory as well as technical aspects of papers.
 One day, I hope to have my own research paper be included in this repository!
 
 ## My Interests
