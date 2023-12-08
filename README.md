@@ -1,6 +1,7 @@
 # Machine Learning Research Papers Notes
 
 This is where I will be writing my personal notes of prominent ML research papers.
+
 ## Who am I and why am I doing this?
 
 I am a university student involved in AI research. I plan to keep myself up-to-speed with the ML landscape by reading up on at least one paper every week. 
@@ -15,6 +16,9 @@ My interests span areas such as:
 * LLMs
 * Computer Vision
 * ... and more!
+
+## Latest updates
+09/12/2023 - [Transformers paper](https://github.com/JaydenTeoh/ML-research/tree/main/Classics/Transformers)
 
 ## Reach out to me
 
