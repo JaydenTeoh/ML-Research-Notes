@@ -60,9 +60,11 @@ For each word in the sequence, we want to measure how relevant is this word to a
 Therefore, for each word in the sequence, the attention layer creates a query vector and a key vector of dimension $d_k$, and value vector of dimension $d_v$. The query, key and value vectors of all the words in the sequence are packed into matrices $Q$, $K$ and $V$ respectively. They are derived from
 
 $$
+\begin{split}
 Q = X \cdot W_Q^T \\
 K = X \cdot W_K^T \\ 
 V = X \cdot W_V^T \\
+\end{split}
 $$
 
 where $X$ is the matrix of word embeddings and $W_Q^T$, $W_K^T$ and $W_V^T$ are transposed learned weight matrices
@@ -115,8 +117,10 @@ Given a multi-headed attention layer with $h$ heads and using different learned 
 The output values from every head are then concatenated and linearly projected to produce the final output vectors. The equation is therefore
 
 $$
+\begin{split}
 MultiHead(Q, K, V) = Concat(head_1,..., head_2)W^O \\
 where \space head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
+\end{split}
 $$
 
 where $W_i^Q$, $W_i^K$, $W_i^V$are the weight matrices for each the $i$th head and $W^O$ is the weight of the final linear projection layer
