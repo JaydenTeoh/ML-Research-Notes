@@ -1,4 +1,5 @@
 # Attention Is All You Need
+Link to original paper: https://arxiv.org/abs/1706.03762
 
 ## Why and what is the Transformer architecture
 
