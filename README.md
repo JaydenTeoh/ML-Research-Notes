@@ -19,7 +19,7 @@ My interests span areas such as:
 * ... and more!
 
 ## Latest updates
-09/12/2023 - [Transformers paper](https://github.com/JaydenTeoh/ML-research/tree/main/Classics/Transformers)
+09/12/2023 - [Attention Is All You Need]([https://github.com/JaydenTeoh/ML-research/tree/main/Classics/Transformers](https://github.com/JaydenTeoh/ML-research/tree/main/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need))
 
 ## Reach out to me
 
