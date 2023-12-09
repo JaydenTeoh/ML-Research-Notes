@@ -19,7 +19,7 @@ My interests span areas such as:
 * ... and more!
 
 ## Latest updates
-09/12/2023 - [Attention Is All You Need](https://github.com/JaydenTeoh/ML-research/blob/main/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need/summary.md)
+09/12/2023 - [Attention Is All You Need](https://github.com/JaydenTeoh/ML-research/blob/main/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need)
 
 ## Reach out to me
 
