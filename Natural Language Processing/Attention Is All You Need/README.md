@@ -12,7 +12,7 @@ So the Transformer model stands out as the first model relying entirely on self-
 ![Untitled](Images/Untitled.png)
 
 1. **Computational Efficiency**
-    1. **Sequential operations**: Self-attention has constant ($O(1)$) number of sequentially executed operations but a recurrent layer requires no. of operations linear to sequence length ($O(n)$).
+    1. **Sequential operations**: Self-attention has constant ( $O(1)$ ) number of sequentially executed operations but a recurrent layer requires no. of operations linear to sequence length ( $O(n)$ ).
     2. **Complexity per Layer**: 
         1. In a self-attention layer, each element attends to all other elements resulting in $n^2$ pairwise interactions. For each interaction, there is a matrix multiplication of dimension $d$ (dimension of input vectors), resulting in $O(n^2 \cdot d)$  complexity per layer
         2. In a recurrent layer, the operations are mainly matrix multiplications between the input and hidden states ($d^2$ complexity). This operation is executed for each element in the sequence, resulting in $O(n \cdot d^2)$ complexity per layer
@@ -124,7 +124,7 @@ where \space head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
 \end{split}
 $$
 
-where $W_i^Q$, $W_i^K$, $W_i^V$are the weight matrices for each the $i$th head and $W^O$ is the weight of the final linear projection layer
+where $W_i^Q$, $W_i^K$, $W_i^V$ are the weight matrices for each the $i$-th head and $W^O$ is the weight of the final linear projection layer
 
 **Benefits**: With different learned weight matrices for each head, Multi-Head Attention enables the model to capture deeper relationships and dependencies within the input sequence compared to a single attention head → improve effective resolution of the model
 
