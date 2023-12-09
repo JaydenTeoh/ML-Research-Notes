@@ -124,7 +124,7 @@ where \space head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
 \end{split}
 $$
 
-where $W_i^Q$, $W_i^K$, $W_i^V$ are the weight matrices for each the $i$-th head and $W^O$ is the weight of the final linear projection layer
+where $W_i^Q$, $W_i^K$, $W_i^V$ are the weight matrices for the $i$-th head and $W^O$ is the weight of the final linear projection layer
 
 **Benefits**: With different learned weight matrices for each head, Multi-Head Attention enables the model to capture deeper relationships and dependencies within the input sequence compared to a single attention head → improve effective resolution of the model
 
