@@ -1,13 +1,16 @@
 # Machine Learning Research Notes
 
-This is where I will be writing my personal notes on mathematics behind Machine Learning and reviews of ML research papers. \
+This is where I will be writing my personal notes on 
+1. Mathematics of Machine Learning
+2. Machine Learning research papers
+
 View notes on Notion [here](https://boiling-aftermath-44e.notion.site/Machine-Learning-Research-5d73301ae1394acf8f3828d44d4b0fe2?pvs=4)
 
 ## Who am I and why am I doing this?
 
-Hi, I am a university student involved in AI research. I plan to get familiar with the mathematical concepts behind ML and also keep myself up-to-speed with the ML landscape by reading up on at least one paper every week. \
-Do expect my notes to be easy-to-digest and I'll make sure to cover as much theoretical aspects of ML.
-One day, I hope to have my own research paper be included in this repository!
+Hi, I am a undergraduate actively engaged in AI research! \
+I have a keen interest in the mathematical foundations of machine learning and staying up-to-date with the ML landscape by regularly reading ML papers. \
+As someone relatively new to ML, I often encounter complex theories or technicalities that can be overwhelming. That's why I've chosen to share my notes here as I hope they can serve as a helpful resource for fellow beginners in the field of ML, just like me.
 
 ## My Interests
 
@@ -26,6 +29,6 @@ My interests in ML span areas such as:
 
 ## Reach out to me
 
-If you wish to contact me regarding ML research or to point out mistakes in my notes, you can reach out via:
+If you would like to contact me to clarify certain aspects of my notes, I am readily available via:
 1. [LinkedIn](https://www.linkedin.com/in/jayden-teoh/)
 2. Email: t3ohjingxiang@gmail.com
