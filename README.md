@@ -19,7 +19,9 @@ My interests span areas such as:
 * ... and more!
 
 ## Latest updates
-09/12/2023 - [Attention Is All You Need](https://github.com/JaydenTeoh/ML-research/blob/main/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need)
+
+- 10/12/2023 - [Generative Adversarial Networks](https://github.com/JaydenTeoh/ML-research/tree/main/Generative%20Models/Generative%20Adversarial%20Networks)
+- 09/12/2023 - [Attention Is All You Need](https://github.com/JaydenTeoh/ML-research/blob/main/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need)
 
 ## Reach out to me
 
