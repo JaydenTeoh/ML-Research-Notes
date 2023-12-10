@@ -66,7 +66,7 @@ where $y$ is the ground truth and $\hat y$ is the predicted probability of the m
 In the case of GANs, $y$ corresponds to the real/generated label and $\hat y$ corresponds to the probability output of $D$. We have:
 
 1. when $y = 1$ (sample $x$ from real data) → $L = -log[D(x)]$
-2. when  $y = 0$ (sample $x$ from $G(z)$) → $L = -log[1 - D(G(z))]$
+2. when  $y = 0$ (sample $x$ from $G(z)$ ) → $L = -log[1 - D(G(z))]$
 
 Combining the two loss terms, the objective function for GANs is given by an expectation over $p_{data}(x)$ and $p_z(z)$
 
@@ -145,9 +145,10 @@ D^*(x) = \frac{p_{data}(x)}{p_{data}(x) + p_g(x)}
 $$
 
 concluding the proof of Proposition 1. 
+
 <br />
 
-**Theorem 1**: The global minimum, $\underset{G}{min}\space V(G,D^*)$, is achieved iff $p_g = p_{data}$. At that point, $\underset{G}{min}\space V(G,D^*) = -log4$
+**Theorem 1**: The global minimum, $\underset{G}{min}\space V(G,D^\ast)$ , is achieved iff $p_g = p_{data}$ . At that point, $\underset{G}{min}\space V(G,D^*) = -log4$
 
 **Proof**: with Proposition 1, we get
 
