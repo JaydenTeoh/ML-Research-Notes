@@ -20,9 +20,9 @@ My interests in ML span areas such as:
 
 ## Latest updates
 
-- 11/12/2023 - [Systems of Linear Equations](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Linear%20Algebra/System%20of%20Linear%20Equations) [Mathematics]
-- 10/12/2023 - [Generative Adversarial Networks](https://github.com/JaydenTeoh/ML-research/tree/main/Notes%20on%20ML%20Papers/Generative%20Models/Generative%20Adversarial%20Networks) [ML paper]
-- 09/12/2023 - [Attention Is All You Need](https://github.com/JaydenTeoh/ML-research/tree/main/Notes%20on%20ML%20Papers/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need) [ML paper]
+- 11/12/2023 - [Systems of Linear Equations](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Linear%20Algebra/System%20of%20Linear%20Equations) [Linear Algebra]
+- 10/12/2023 - [Generative Adversarial Networks](https://github.com/JaydenTeoh/ML-research/tree/main/ML%20Papers%20Explained/Generative%20Models/Generative%20Adversarial%20Networks) [ML paper]
+- 09/12/2023 - [Attention Is All You Need](https://github.com/JaydenTeoh/ML-research/tree/main/ML%20Papers%20Explained/Natural%20Language%20Processing/Attention%20Is%20All%20You%20Need) [ML paper]
 
 ## Reach out to me
 
