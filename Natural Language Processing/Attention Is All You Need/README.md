@@ -50,7 +50,7 @@ Let’s pretend we are training the Transformer model to translate English sente
 
 Self-attention layers are employed within the encoder and decoder stacks.
 
-What is Self-Attention?
+<ins>What is Self-Attention?</ins>
 
 ![Image from [Sudipto Baul](https://medium.com/machine-intelligence-and-deep-learning-lab/transformer-the-self-attention-mechanism-d7d853c2c621)](Images/Untitled%206.png)
 
@@ -93,7 +93,7 @@ $$
 
 By multiplying the weights with the value matrix $V$, we get the weighted sum of the value vectors to represent the relevance of each word in the sequence → allow the model to pay less attention to words that have low weighted sums as they are not relevant to the sequence 
 
-Decoder: Self-Attention with Masking
+<ins>Decoder: Self-Attention with Masking</ins>
 
 ![Untitled](Images/Untitled%207.png)
 
@@ -107,7 +107,7 @@ where $M$  is the mask
 
 The reason behind adding this mask is such that for each word in the sequence, we only calculate its relevance to words prior to it; weights corresponding to future positions are set to -∞. In this way, this prevents the model from having access to future tokens when trying to predict the current token in the output sequence; it should not be allowed to use information from future tokens to predict the current token → ensure the autoregressive nature of the decoding process
 
-Multi-Headed Attention
+<ins>Multi-Headed Attention</ins>
 
 ![Untitled](Images/Untitled%208.png)
 
@@ -128,7 +128,7 @@ where $W_i^Q$, $W_i^K$, $W_i^V$ are the weight matrices for the $i$-th head and 
 
 **Benefits**: With different learned weight matrices for each head, Multi-Head Attention enables the model to capture deeper relationships and dependencies within the input sequence compared to a single attention head → improve effective resolution of the model
 
-Residual Connection and Layer Normalisation
+<ins>Residual Connection and Layer Normalisation</ins>
 
 There is also residual connections around each multi-head attention layer, followed by layer normalisation. 
 
