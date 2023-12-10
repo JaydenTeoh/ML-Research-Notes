@@ -168,7 +168,7 @@ V(G,D^*)  & = E_{x \sim p_{data}(x)}[log(\frac{p_{data}(x)}{\frac{p_{data}(x) + 
 \end{align} \notag
 $$
 
-We can transform the expectations in the original function into Kullback-Leibler divergence
+We can transform the expectations in the original function into **Kullback-Leibler divergence**
 
 $$
 V(G,D^*) = -log4 + D_{KL}(p_{data} || \frac{p_{data} + p_g}{2}) + D_{KL}(p_{g} || \frac{p_{data} + p_g}{2})
