@@ -61,7 +61,7 @@ $$
 L = -[ylog(\hat y) + (1-y)log(1-\hat y)]
 $$
 
-where $y$ is the ground truth and $\hat y$ is the predicted probability of the model, i.e. .
+where $y$ is the ground truth and $\hat y$ is the predicted probability of the model.
 
 In the case of GANs, $y$ corresponds to the real/generated label and $\hat y$ corresponds to the probability output of $D$. We have:
 
