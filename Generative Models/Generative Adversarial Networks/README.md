@@ -8,19 +8,18 @@ Deep learning has resulted in development of discriminative models capable of ma
 
 In contrast to discriminative models, deep generative models have had less impact. Generative models aim to model the underlying probability distribution of the data, allowing for the generation of new samples that resemble the original dataset. However, deep generative models face several challenges:
 
-1. **Complexity in Probabilistic Computations**: Probabilistic computations involving techniques like maximum likelihood estimation can become intractable (cannot be solved by a polynomial-time algorithm) as the complexity of the mode increases
-2. **Difficulty Leveraging Piecewise Linear Units**: It is difficult to leverage piecewise linear units like *ReLU* in generative models. This can be due to reasons such as:
-    1. **Smoothness and Non-Smoothness**: Piecewise linear units have regions of smoothness (linearity) and non-smoothness (non-linearity) which might not align well with generative models which often require smooth and continuous representations to model probability distributions
-    2. **Model Expressiveness**: Generative models need to capture complex distributions and piecewise linear units might not provide enough expressiveness to capture these complex relationships
-    3. **Incorporating Latent Variables**: Generative models often involve latent variables, which are unobserved or hidden variables that capture underlying patterns in data. Piecewise linear units might not effectively capture the complex interactions between observed and latent variables in a way that accurately represents the underlying probability distribution
+1. **Complexity in Probabilistic Computations**: Probabilistic computations involving techniques like maximum likelihood estimation can become intractable (cannot be solved by a polynomial-time algorithm) as the complexity of the model increases
+2. **Difficulty Leveraging Piecewise Linear Units**: It is difficult to leverage piecewise linear units like *ReLU* in generative models 
 
 ![Image from [Al Gharakhanian](https://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html)](Images/Untitled.png)
 
 Image from [Al Gharakhanian](https://www.kdnuggets.com/2017/01/generative-adversarial-networks-hot-topic-machine-learning.html)
 
-In this paper, the authors introduce the concept of **adversarial networks** where a **generative model** is pitted against an adversary: a **discriminative model** that learns to determine whether a sample is produced by the generative model or from the actual data distribution. The analogy used is that the generative model represents a team of counterfeiters trying to produce fake currency and use it without detection, while the discriminative model is like the police, trying to detect the counterfeit currency. Competition results in both teams to improve their methods until generated samples are indistinguishable from data samples. GAN generates samples by passing **random noise** through a multilayer perceptron. This introduces latent variables and allows the generative model to learn features that are robust to variations in the input. Both models are trained using only backpropagation and dropout algorithms, requiring only forward propagation for sampling from the generative model, without the need for approximate inference (approximating complex probability distributions for intractable computations using techniques such as Markov Chain Monte Carlo).
+In this paper, the authors introduce the concept of **adversarial networks** where a **generative model** is pitted against an adversary: a **discriminative model** that learns to determine whether a sample is produced by the generative model or from the actual data distribution. The analogy used is that the generative model represents a team of counterfeiters trying to produce fake currency and use it without detection, while the discriminative model is like the police, trying to detect the counterfeit currency. Competition results in both teams to improve their methods until generated samples are indistinguishable from data samples. 
 
 The competition between the two networks is the primary training criterion. GANs operate as a **minimax** game where one player’s gain is the other player’s loss, and the goal is to minimise the maximum possible loss. The objective of the game is to reach a strategic equilibrium, known as a **saddle point**, in their value functions.
+
+GAN generates samples by passing **random noise** through a multilayer perceptron. This introduces latent variables and allows the generative model to learn features that are robust to variations in the input. Both models are trained using only backpropagation and dropout algorithms, requiring only forward propagation for sampling from the generative model, without the need for approximate inference (approximating complex probability distributions for intractable computations using techniques such as Markov Chain Monte Carlo). The lack of feedback loops (recurrent layers) make GAN better at leveraging piecewise linear units.
 
 <ins>Notation</ins>
 
@@ -49,7 +48,7 @@ The discriminator takes in input $x$ and outputs a single scalar value $D(x)$. T
 
 <ins>Training Criterion</ins>
 
-We train $D$ to maximise the probability of assigning the correct label to both training examples and samples from $G$. We train $G$ to minimize $log(1 - D(G(z))$; the $log$ of the probability that $D$ incorrectly identifies the generated data as real data → higher log probability means higher error rate of $D$
+We train $D$ to maximise the probability of assigning the correct label to both training examples and samples from $G$. We train $G$ to minimize $log(1 - D(G(z))$; the $log$ of the probability that $D$ incorrectly identifies the generated data as real data → lower log probability means higher error rate of $D$
 
 <br />
 
