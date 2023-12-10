@@ -173,14 +173,15 @@ $$
 V(G,D^*) = -log4 + D_{KL}(p_{data} || \frac{p_{data} + p_g}{2}) + D_{KL}(p_{g} || \frac{p_{data} + p_g}{2})
 $$
 
-**Note**: *Kullback-Leibler divergence*, denoted by $D_{KL}(P || Q)$, measures how one probability distribution $P$ diverges from a reference distribution $Q$. It quantifies the difference between the two probability distributions by computing the expected logarithmic difference between $P$ and $Q$ when the data is sample from $P$. In continuous probability distributions, Kullback-Leibler divergence is define by
+- **Note**: *Kullback-Leibler divergence*, denoted by $D_{KL}(P || Q)$, measures how one probability distribution $P$ diverges from a reference distribution $Q$. It quantifies the difference between the two probability distributions by computing the expected logarithmic difference between $P$ and $Q$ when the data is sample from $P$. In continuous probability distributions, Kullback-Leibler divergence is define by
     
 $$
     \begin{align} \notag
-    D_{KL}(P || Q)  & = \int_{-\infin}^{\infin}P(x)log(\frac{P(x)}{Q(x)})\space dx \\
+    D_{KL}(P || Q)  & = \int_{-\infty}^{\infty}P(x)log(\frac{P(x)}{Q(x)})\space dx \\
     & = E_{x\sim P(x)}[log(\frac{P(x)}{Q(x)})] \notag
     \end{align}
 $$
+
 <br />
 
 Our function can then be represented using **Jensen-Shannon divergence** as such
@@ -189,7 +190,7 @@ $$
 V(G,D^*) = -log4 + 2JSD(p_{data}||p_g)
 $$
 
-**Note**: *Jensen-Shannon divergence*, denoted by $JSD(P||Q)$, is based on the Kullback-Leibler divergence and it is a symmetric measurement of the similarity between two probability distributions $P$ and $Q$. It is given by
+- **Note**: *Jensen-Shannon divergence*, denoted by $JSD(P||Q)$, is based on the Kullback-Leibler divergence and it is a symmetric measurement of the similarity between two probability distributions $P$ and $Q$. It is given by
     
 $$
     JSD(P||Q) = JSD(Q||P) = \frac{1}{2}D_{KL}(P||\frac{P+Q}{2}) + \frac{1}{2}D_{KL}(Q||\frac{P+Q}{2})
