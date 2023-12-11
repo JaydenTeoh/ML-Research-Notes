@@ -86,7 +86,6 @@ We then **eliminate** the $y$ variable from all equations below $L_2$ . This is 
 
 $$
 L_3 - \frac{1}{5}L_2 \rightarrow L_3 \\
-
 $$
 
 such that we get
