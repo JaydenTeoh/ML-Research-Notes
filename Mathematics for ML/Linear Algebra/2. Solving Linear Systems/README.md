@@ -132,7 +132,7 @@ z=1 \\
 \end{cases}
 $$
 
-and the coefficient matrix is said to be in its **reduced row echelon form** because
+and its coefficient matrix
 
 $$
 A' = \left[
@@ -144,7 +144,8 @@ A' = \left[
 \right]
 $$
 
-1. the **leading entry (pivot)**, i.e. the **leftmost non-zero entry**, ****of each row is 1
+is said to be in its **reduced row echelon form** because
+1. the **leading entry (pivot)**, i.e. the **leftmost non-zero entry**, of each row is 1
 2. each leading entry is the only non-zero entry in its column
 3. the leading entry in a row is to the right of the leading entry in the previous row
 4. all rows **consisting entirely of zeros**, if any, are placed at the bottom of the matrix
