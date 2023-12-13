@@ -675,13 +675,15 @@ where $n$ is the no. of dimensions in $\vec{x}$.
 <br />
 
 Given that
+
 $$
 A = 
-\begin{bmatrix} 
-3 & 1 \\ 
-1 & 2 \\
-\end{bmatrix}
+  \begin{bmatrix} 
+    3 & 1 \\\
+    1 & 2 \\
+  \end{bmatrix}
 $$
+
 we have
 
 $$
