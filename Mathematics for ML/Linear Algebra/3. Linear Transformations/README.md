@@ -190,20 +190,9 @@ Let’s use the example of a 2-dimensional vector space:
 
 ![Untitled](images/Untitled%205.png)
 
-Here the vectors $\vec{v_1} = \left[
-  \begin{matrix}
-    1 \\
-    0 \\
-  \end{matrix}
-\right],
-\vec{v_2} = \left[
-  \begin{matrix}
-    0 \\
-    1 \\
-  \end{matrix}
-\right]$ are standard unit vectors that form the standard basis of the 2-dimensional vector space. 
+Here the vectors $\vec{v_1} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \vec{v_2} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ are standard unit vectors that form the standard basis of the 2-dimensional vector space. 
 
-Under a linear transformation $f$, we get $\vec{v_1}' = \begin{bmatrix} 3 \\ 1 \\ \end{bmatrix}, \vec{v_2}' = \begin{bmatrix} 1 \\ 2 \\ \end{bmatrix}$. Understanding the mapping of the standard unit vectors $\vec{v_1}$ and $\vec{v_2}$ allow us to deduce $f$
+Under a linear transformation $f$, we get $\vec{v_1}' = \begin{bmatrix} 3 \\ 1 \end{bmatrix}, \vec{v_2}' = \begin{bmatrix} 1 \\ 2 \end{bmatrix} $. Understanding the mapping of the standard unit vectors $\vec{v_1}$ and $\vec{v_2}$ allow us to deduce $f$
 
 $$
 f(\left[
@@ -243,7 +232,7 @@ A = \left[
 \right]
 $$
 
-Then, we define the matrix-vector multiplication of $A$ and any 2-dimensional vector $\vec{v} = \begin{bmatrix} x \\ y \\ \end{bmatrix}$ as
+Then, we define the matrix-vector multiplication of $A$ and any 2-dimensional vector $\vec{v} = \begin{bmatrix} x \\ y \end{bmatrix}$ as
 
  
 
@@ -561,7 +550,7 @@ A \cdot (B \cdot \hat{v_i}) &= \notag A \cdot
 \end{align}
 $$
 
-We can see that the dot product of the $i $-th row vector in $A$ and the $j$th column vector in $B$ gives us $ c_{ij} $ , the scalar in the $ i $-th row and $ j $-th column in the matrix $C$
+We can see that the dot product of the $i $-th row vector in $A$ and the $j $-th column vector in $B$ gives us $c_{ij} $ , the scalar in the $i $-th row and $j $-th column in the matrix $C$
 
 ![Untitled](images/Untitled%207.png)
 
@@ -640,12 +629,7 @@ $$
 
 where $n$ is the no. of dimensions in $\vec{x}$.
 
-If $A = \left[
-  \begin{matrix}
-    3 & 1 \\\
-    1 & 2 \\
-  \end{matrix}
-\right]$, we have
+If $A = \begin{bmatrix} 3 & 1 \\ 1 & 2 \\ \end{bmatrix}$, we have
 
 $$
 A^{-1}\cdot A = \left[
