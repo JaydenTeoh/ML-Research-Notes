@@ -191,32 +191,35 @@ Let’s use the example of a 2-dimensional vector space:
 ![Untitled](images/Untitled%205.png)
 
 Here the vectors 
+
 $$
 \vec{v_1} = 
-\begin{bmatrix} 
-1 \\ 
-0 \\
-\end{bmatrix}, 
+  \begin{bmatrix} 
+    1 \\\
+    0 \\
+  \end{bmatrix}, 
 \vec{v_2} = 
-\begin{bmatrix} 
-0 \\ 
-1 \\
-\end{bmatrix}
+  \begin{bmatrix} 
+    0 \\\
+    1 \\
+  \end{bmatrix}
 $$
+
 are standard unit vectors that form the standard basis of the 2-dimensional vector space. 
 
 Under a linear transformation $f$, we get 
+
 $$ 
 \vec{v_1}' = 
-\begin{bmatrix}
-3 \\
-1 \\
-\end{bmatrix},
+  \begin{bmatrix}
+    3 \\\
+    1 \\
+  \end{bmatrix},
 \vec{v_2}' = 
-\begin{bmatrix} 
-1 \\
-2 \\
-\end{bmatrix}
+  \begin{bmatrix} 
+    1 \\\
+    2 \\
+  \end{bmatrix}
 $$
  
 Understanding the mapping of the standard unit vectors $\vec{v_1}$ and $\vec{v_2}$ allow us to deduce $f$
@@ -260,13 +263,15 @@ A = \left[
 $$
 
 Then, we define the matrix-vector multiplication of $A$ and any 2-dimensional vector 
+
 $$
 \vec{v} = 
-\begin{bmatrix} 
-x \\ 
-y \\
-\end{bmatrix}
+  \begin{bmatrix} 
+    x \\ 
+    y \\
+  \end{bmatrix}
 $$
+
 as
 
 $$
@@ -590,8 +595,13 @@ We can see that the dot product of the $i $-th row vector in $A$ and the $j $-th
 By horizontally stacking the transformed vectors of every standard unit vector in the standard basis of the $p$-dimensional space, we get
 
 $$
-A \cdot B = \left[\begin{matrix}a_{11}b_{11}+\cdots +a_{1n}b_{n1}&a_{11}b_{12}+\cdots +a_{1n}b_{n2}&\cdots &a_{11}b_{1p}+\cdots +a_{1n}b_{np}\\a_{21}b_{11}+\cdots +a_{2n}b_{n1}&a_{21}b_{12}+\cdots +a_{2n}b_{n2}&\cdots &a_{21}b_{1p}+\cdots +a_{2n}b_{np}\\\vdots &\vdots &\ddots &\vdots \\a_{m1}b_{11}+\cdots +a_{mn}b_{n1}&a_{m1}b_{12}+\cdots +a_{mn}b_{n2}&\cdots & a_{m1}b_{1p}+ \cdots +a_{mn}b_{np}\\
-\end{matrix}\right]
+A \cdot B = 
+  \begin{bmatrix}
+    a_{11}b_{11}+\cdots +a_{1n}b_{n1} & a_{11}b_{12}+\cdots +a_{1n}b_{n2}&\cdots & a_{11}b_{1p}+\cdots +a_{1n}b_{np} \\\ 
+    a_{21}b_{11}+\cdots +a_{2n}b_{n1} & a_{21}b_{12}+\cdots +a_{2n}b_{n2} & \cdots & a_{21}b_{1p}+\cdots +a_{2n}b_{np} \\\
+    \vdots & \vdots & \ddots & \vdots \\\
+    a_{m1}b_{11}+\cdots +a_{mn}b_{n1} & a_{m1}b_{12}+\cdots +a_{mn}b_{n2} & \cdots & a_{m1}b_{1p}+ \cdots +a_{mn}b_{np} \\
+\end{bmatrix}
 $$
 
 which is the general formula for matrix multiplication. 
