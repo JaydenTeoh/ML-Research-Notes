@@ -8,4 +8,5 @@ Linear algebra forms the foundational framework for representing and manipulatin
 
 <br />
 
-The content in this repository includes detailed yet concise notes taken from the [DeepLearning.AI's Linear Algebra for Machine Learning and Data Science](https://www.coursera.org/learn/machine-learning-linear-algebra) course and the labs used in the course.
+The content in this repository includes detailed yet concise notes taken from the [DeepLearning.AI's Linear Algebra for Machine Learning and Data Science](https://www.coursera.org/learn/machine-learning-linear-algebra) course and the [3Blue1Brown](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab) Youtube series.
+
