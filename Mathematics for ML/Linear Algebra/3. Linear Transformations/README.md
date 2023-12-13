@@ -406,8 +406,8 @@ B \cdot(A \cdot \vec{v}) \notag &=
     x \\\
     y \\
   \end{matrix}
-\right] ) \\ \notag &= 
-\left[
+\right] ) \\ &= 
+\notag\left[
   \begin{matrix}
     2 & -1 \\\
     0 & 2 \\
@@ -419,20 +419,20 @@ B \cdot(A \cdot \vec{v}) \notag &=
     3x + y  \\\
     x + 2y \\
   \end{matrix}
-\right])\\ \notag &= 
-\left[
+\right]) \\ &= 
+\notag\left[
   \begin{matrix}
     6x + 2y - x - 2y \\\
     0x + 0y + 2x + 4y \\
   \end{matrix}
-\right]\\ \notag &= 
-\left[
+\right] \\ &= 
+\notag\left[
   \begin{matrix}
     5x + 0y \\\
     2x + 4y \\
   \end{matrix}
-\right]\\ \notag &= 
-\left[
+\right] \\ &= 
+\notag\left[
   \begin{matrix}
     5 & 0 \\\
     2 & 4 \\
@@ -537,8 +537,8 @@ Now, we want to follow its transformation under $A$
 
 $$
 \begin{align}
-A \cdot (B \cdot \hat{v_i}) \notag &= 
-A \cdot 
+A \cdot (B \cdot \hat{v_i}) &= 
+\notag A \cdot 
 \left[
   \begin{matrix}
     b_{1i} \\\
@@ -546,8 +546,8 @@ A \cdot
     \vdots \\\
     b_{ni} \\
   \end{matrix}
-\right] \\ \notag &=
-\left[
+\right] \\ &=
+\notag\left[
   \begin{matrix}
     a_{11} \\\
     a_{21} \\\
@@ -570,15 +570,15 @@ A \cdot
     \vdots \\\
     b_{mn} \\
   \end{matrix}
-\right] \cdot b_{ni} \\ \notag &=
-\left[
+\right] \cdot b_{ni} \\ &=
+\notag\left[
   \begin{matrix}
   a_{11}b_{1i}+\cdots+a_{1n}b_{ni}\\\
   a_{21}b_{1i}+\cdots+a_{2n}b_{ni}\\\
   \vdots \\\
   a_{m1}b_{1i}+\cdots+a_{mn}b_{ni}\\
-  \end{matrix}\right] \\ \notag &=
-\left[
+  \end{matrix}\right] \\ &=
+\notag\left[
   \begin{matrix}
     c_{1i} \\\
     c_{2i} \\\
