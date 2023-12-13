@@ -23,20 +23,20 @@ Vectors are **directed line segments** that have both a **magnitude and directio
 
 ## Magnitude of Vectors (Norm)
 
-The **norm of a vector** refers to the **length** or the **magnitude** of a vector. For a vector $\vec{x}$, its norm is denoted as $\|\vec{x}\|$
+The **norm of a vector** refers to the **length** or the **magnitude** of a vector. For a vector $\vec{x}$, its norm is denoted as $\Vert\vec{x}\Vert$
 
 There are different measures for the norm. The norm of a vector is a non-negative value. A norm must satisfy the following properties:
 
-1. **Triangle Inequality**: $\|\vec{x} + \vec{y} \| \leq \|\vec{x} \| + \|\vec{y} \|$ for all vectors $\vec{x}, \vec{y}$
-2. **Absolute Homogeneity**: $\|s\vec{x}\| = \|s\| \|\vec{x}\|$ for all vectors $\vec{x}$ and scalars $s$
-3. **Positive Definiteness**: If $\|\vec{x}\| = 0$ , then $\vec{x} = 0$ for all vectors $\vec{x}$
+1. **Triangle Inequality**: $\Vert\vec{x} + \vec{y} \Vert \leq \Vert\vec{x} \Vert + \Vert\vec{y} \Vert$ for all vectors $\vec{x}, \vec{y}$
+2. **Absolute Homogeneity**: $\Vert s \vec{x}\Vert = |s| \Vert\vec{x}\Vert$ for all vectors $\vec{x}$ and scalars $s$
+3. **Positive Definiteness**: If $\Vert\vec{x}\Vert = 0$ , then $\vec{x} = 0$ for all vectors $\vec{x}$
 
 Unit Vector
 
 The **unit vector** has a magnitude of 1. Given a non-zero vector $\vec{x}$, its normalised vector is the unit vector in the same direction, i.e.
 
 $$
-\hat{x} = \frac{\vec{x}}{\|\vec{x}\|}
+\hat{x} = \frac{\vec{x}}{\Vert\vec{x}\Vert}
 $$
 
 Unit vectors may be used to represent the axes of a [Cartesian coordinate system](https://en.wikipedia.org/wiki/Cartesian_coordinate_system). For instance, the standard unit vectors in the direction of the *x*, *y*, and *z* axes of a three dimensional Cartesian coordinate system are
@@ -72,13 +72,13 @@ $\ell^p$ norm
 Let $p \geq 1$ be a real number. The $\ell^p$ norm (also called $p$-norm) of a vector $x = (x_1, x_2, \dots, x_n)$ is
 
 $$
-\|x\| := (\sum_{i=1}^{n}\|x_i\|^p)^{\frac{1}{p}}
+\Vert x\Vert := (\sum_{i=1}^{n}\Vert x_i \Vert^p)^{\frac{1}{p}}
 $$
 
 For $p = 1$, we get the **Manhattan norm** (or $\ell^1$ norm) 
 
 $$
-\|x\|_1 := \sum_{i=1}^{n}\|x_i\|
+\Vert x\Vert_1 := \sum_{i=1}^{n}|x_i|
 $$
 
 which is simply the sum of the absolute values of its **Cartesian coordinates** (columns).
@@ -86,7 +86,7 @@ which is simply the sum of the absolute values of its **Cartesian coordinates** 
 For $p = 2$, we get the **Euclidean norm** (or $\ell^2$ norm) 
 
 $$
-\|x\|_2 := \sqrt{x_1^2+\dots + x_n^2} = \sqrt{x \cdot x}
+\Vert x\Vert_2 := \sqrt{x_1^2+\dots + x_n^2} = \sqrt{x \cdot x}
 $$
 
 which is the **most commonly used** norm and it is a consequence of the Pythagorean theorem.
@@ -94,7 +94,7 @@ which is the **most commonly used** norm and it is a consequence of the Pythagor
 As $p$ approaches $\infty$, the $p$-norm becomes the **Chebychev norm** which gives
 
 $$
-\|x\|_\infty :=\max _{i}|x_{i}|
+\Vert x\Vert_\infty :=\underset{i}{max} |x_{i}|
 $$
 
 ## Vector Operations
@@ -134,10 +134,10 @@ $$
 Another way to calculating the dot product is
 
 $$
-\vec{a} \cdot \vec{b} = \|\vec{a}\|\|\vec{b}\|\cos\theta
+\vec{a} \cdot \vec{b} = \Vert\vec{a}\Vert\Vert\vec{b}\Vert\cos\theta
 $$
 
-where $\|\vec{a}\|$ and $\|\vec{b}\|$ denotes the magnitude of $\vec{a}$ and $\vec{b}$ respectively and $\theta$ is the angle between the two vectors. 
+where $\Vert\vec{a}\Vert$ and $\Vert\vec{b}\Vert$ denotes the magnitude of $\vec{a}$ and $\vec{b}$ respectively and $\theta$ is the angle between the two vectors. 
 
 ![Untitled](images/Untitled%202.png)
 
@@ -152,7 +152,7 @@ The dot product of two **codirectional** vectors (same direction) is simply the 
 We write the cross product between two vectors as $\vec{a} \space \text{x} \space \vec{b}$ . Unlike the dot product which returns a scalar, the result of a cross product is another vector, i.e. $\vec{a} \space \text{x} \space \vec{b} = \vec{c}$. The new vector has two properties:
 
 1. $\vec{c}$ is perpendicular to both $\vec{a}$ and $\vec{b}$ $\rightarrow$ $\vec{c}\space \cdot \space \vec{a} = \vec{c} \space \cdot \space \vec{b} = 0$
-2. The magnitude of $\vec{c}$ is the area of the parallelogram having $\vec{a}$ and $\vec{b}$  as sides, i.e. $\vec{c}$$\|\vec{c}\| = \|\vec{a}\|\|\vec{b}\| \sin\theta$
+2. The magnitude of $\vec{c}$ is the area of the parallelogram having $\vec{a}$ and $\vec{b}$  as sides, i.e. $\Vert\vec{c}\Vert = \Vert\vec{a}\Vert\Vert\vec{b}\Vert \sin\theta$
 
 ![Untitled](images/Untitled%204.png)
 
@@ -203,18 +203,7 @@ Here the vectors $\vec{v_1} = \left[
   \end{matrix}
 \right]$ are standard unit vectors that form the standard basis of the 2-dimensional vector space. 
 
-Under a linear transformation $f$, we get $\vec{v_1}' = \left[
-  \begin{matrix}
-    3 \\
-    1 \\
-  \end{matrix}
-\right],
-\vec{v_2}' = \left[
-  \begin{matrix}
-    1 \\
-    2 \\
-  \end{matrix}
-\right]$. Understanding the mapping of the standard unit vectors $\vec{v_1}$ and $\vec{v_2}$ allow us to deduce $f$
+Under a linear transformation $f$, we get $\vec{v_1}' = \begin{bmatrix} 3 \\ 1 \\ \end{bmatrix}, \vec{v_2}' = \begin{bmatrix} 1 \\ 2 \\ \end{bmatrix}$. Understanding the mapping of the standard unit vectors $\vec{v_1}$ and $\vec{v_2}$ allow us to deduce $f$
 
 $$
 f(\left[
@@ -254,12 +243,7 @@ A = \left[
 \right]
 $$
 
-Then, we define the matrix-vector multiplication of $A$ and any 2-dimensional vector $\vec{v} = \left[
-  \begin{matrix}
-    x \\
-    y \\
-  \end{matrix}
-\right]$  as
+Then, we define the matrix-vector multiplication of $A$ and any 2-dimensional vector $\vec{v} = \begin{bmatrix} x \\ y \\ \end{bmatrix}$ as
 
  
 
@@ -494,7 +478,7 @@ C = \left[
 \right]
 $$
 
-As we saw earlier, the $i$th column of a matrix $C$ allows us to observe the linear transformation of $\hat v_i$ (standard unit vector in the $i$th dimension) under $C$. Since $C$ measures the overall transformation under $B$ followed by $A$, $\hat{v_i}$ under $C$ is
+As we saw earlier, the $i $-th column of a matrix $C$ allows us to observe the linear transformation of $\hat v_i$ (standard unit vector in the $i $-th dimension) under $C$. Since $C$ measures the overall transformation under $B$ followed by $A$, $\hat{v_i}$ under $C$ is
 
 $$
 A\cdot (B\cdot \hat{v_i}) = \left[
@@ -529,39 +513,43 @@ $$
 A \cdot (B \cdot \hat{v_i}) &= \notag A \cdot 
 \left[
   \begin{matrix}
-    b_{1i} \\
-    b_{2i} \\
-    \vdots \\
+    b_{1i} \\\
+    b_{2i} \\\
+    \vdots \\\
     b_{ni} \\
   \end{matrix}
 \right] \\ \notag &=
 \left[
   \begin{matrix}
-    a_{11} \\
-    a_{21} \\
-    \vdots \\
+    a_{11} \\\
+    a_{21} \\\
+    \vdots \\\
     a_{m1} \\
   \end{matrix}
 \right] \cdot b_{1i} + 
 \left[
   \begin{matrix}
-    a_{12} \\
-    a_{22} \\
-    \vdots \\
+    a_{12} \\\
+    a_{22} \\\
+    \vdots \\\
     a_{m2} \\
   \end{matrix}
 \right] \cdot b_{2i} + \dots +
 \left[
   \begin{matrix}
-    b_{1n} \\
-    b_{2n} \\
-    \vdots \\
+    b_{1n} \\\
+    b_{2n} \\\
+    \vdots \\\
     b_{mn} \\
   \end{matrix}
-\right] \cdot b_{ni} \notag \\ \notag &=
-\left[\begin{matrix}
-a_{11}b_{1i}+\cdots+a_{1n}b_{ni}\\a_{21}b_{1i}+\cdots+a_{2n}b_{ni}\\\vdots \\
-a_{m1}b_{1i}+\cdots+a_{mn}b_{ni}\\\end{matrix}\right] \\ \notag\\ &=
+\right] \cdot b_{ni} \notag \\\ \notag &=
+\left[
+  \begin{matrix}
+  a_{11}b_{1i}+\cdots+a_{1n}b_{ni}\\\
+  a_{21}b_{1i}+\cdots+a_{2n}b_{ni}\\\
+  \vdots \\\
+  a_{m1}b_{1i}+\cdots+a_{mn}b_{ni}\\
+  \end{matrix}\right] \\\ \notag &=
 \left[
   \begin{matrix}
     c_{1i} \\\
@@ -573,7 +561,7 @@ a_{m1}b_{1i}+\cdots+a_{mn}b_{ni}\\\end{matrix}\right] \\ \notag\\ &=
 \end{align}
 $$
 
-We can see that the dot product of the $i$th row vector in $A$ and the $j$th column vector in $B$ gives us $c_{ij}$, the scalar in the $i$th row and $j$th column in the matrix $C$
+We can see that the dot product of the $i $-th row vector in $A$ and the $j$th column vector in $B$ gives us $ c_{ij} $ , the scalar in the $ i $-th row and $ j $-th column in the matrix $C$
 
 ![Untitled](images/Untitled%207.png)
 
@@ -655,7 +643,7 @@ where $n$ is the no. of dimensions in $\vec{x}$.
 If $A = \left[
   \begin{matrix}
     3 & 1 \\\
-    1 & 2 \\\
+    1 & 2 \\
   \end{matrix}
 \right]$, we have
 
