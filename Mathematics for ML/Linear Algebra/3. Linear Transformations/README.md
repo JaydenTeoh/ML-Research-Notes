@@ -376,66 +376,62 @@ $$
 
 We can see that the linear transformation of $\vec{v}$ under $A$ followed by $B$ is
 
-$$
-\begin{align}
+$$\begin{align}
 B \cdot(A \cdot \vec{v}) &= \notag
 \left[
   \begin{matrix}
-    2 & -1 \\
+    2 & -1 \\\
     0 & 2 \\
   \end{matrix}
 \right]
 \cdot
 (\left[
   \begin{matrix}
-    3 & 1 \\
+    3 & 1 \\\
     1 & 2 \\
   \end{matrix}
 \right] \cdot \left[
   \begin{matrix}
-    x \\
+    x \\\
     y \\
   \end{matrix}
 \right] ) \\ &= \notag
 \left[
   \begin{matrix}
-    2 & -1 \\
+    2 & -1 \\\
     0 & 2 \\
   \end{matrix}
 \right]
 \cdot
 (\left[
   \begin{matrix}
-    3x + y  \\
+    3x + y  \\\
     x + 2y \\
   \end{matrix}
 \right])\\ &= \notag
 \left[
   \begin{matrix}
-    6x + 2y - x - 2y \\
+    6x + 2y - x - 2y \\\
     0x + 0y + 2x + 4y \\
   \end{matrix}
 \right]\\ &= \notag
 \left[
   \begin{matrix}
-    5x + 0y \\
+    5x + 0y \\\
     2x + 4y \\
   \end{matrix}
 \right]\\ &= \notag
 \left[
   \begin{matrix}
-    5 & 0 \\
+    5 & 0 \\\
     2 & 4 \\
   \end{matrix}
 \right] \cdot \left[
   \begin{matrix}
-    x \\
+    x \\\
     y \\
-  \end{matrix}
-\right]
-
-\end{align}
-$$
+  \end{matrix}\right]
+\end{align}$$
 
 ![Untitled](images/Untitled%206.png)
 
@@ -465,7 +461,22 @@ General Formula of Matrix Multiplication
 If $A$ is a $m \space \text{x} \space n$ matrix and $B$ is a $n \space \text{x} \space p$ matrix,
 
 $$
-\mathbf {A} =\left[{\begin{matrix}a_{11}&a_{12}&\cdots &a_{1n}\\a_{21}&a_{22}&\cdots &a_{2n}\\\vdots &\vdots &\ddots &\vdots \\a_{m1}&a_{m2}&\cdots &a_{mn}\\\end{matrix}}\right],\quad \mathbf {B} =\left[{\begin{matrix}b_{11}&b_{12}&\cdots &b_{1p}\\b_{21}&b_{22}&\cdots &b_{2p}\\\vdots &\vdots &\ddots &\vdots \\b_{n1}&b_{n2}&\cdots &b_{np}\\\end{matrix}}\right]
+A =\left[
+  \begin{matrix}
+  a_{11}&a_{12}&\cdots &a_{1n}\\\
+  a_{21}&a_{22}&\cdots &a_{2n}\\\
+  \vdots &\vdots &\ddots &\vdots \\\
+  a_{m1}&a_{m2}&\cdots &a_{mn}\\
+  \end{matrix}
+  \right], 
+  B =\left[
+    \begin{matrix}
+    b_{11}&b_{12}&\cdots &b_{1p}\\\
+    b_{21}&b_{22}&\cdots &b_{2p}\\\
+    \vdots &\vdots &\ddots &\vdots \\\
+    b_{n1}&b_{n2}&\cdots &b_{np}\\
+    \end{matrix}
+  \right]
 $$
 
 To derive $A\cdot B$, we want to measure the **overall effect of the transformation of a vector** under $B$ followed by under $A$.
@@ -473,7 +484,14 @@ To derive $A\cdot B$, we want to measure the **overall effect of the transformat
 Let the matrix $C$ be the result $A\cdot B$  such that $C$ is a $m \space \text{x} \space p$ matrix ($m$ rows from $A$ and $p$ columns from $B$)
 
 $$
-C = \left[\begin{matrix}c_{11}&c_{12}&\cdots &c_{1p}\\c_{21}&c_{22}&\cdots &c_{2p}\\\vdots &\vdots &\ddots &\vdots \\c_{m1}&c_{m2}&\cdots &c_{mp}\\\end{matrix}\right]
+C = \left[
+  \begin{matrix}
+  c_{11}&c_{12}&\cdots &c_{1p}\\\
+  c_{21}&c_{22}&\cdots &c_{2p}\\\
+  \vdots &\vdots &\ddots &\vdots \\\
+  c_{m1}&c_{m2}&\cdots &c_{mp}\\
+  \end{matrix}
+\right]
 $$
 
 As we saw earlier, the $i$th column of a matrix $C$ allows us to observe the linear transformation of $\hat v_i$ (standard unit vector in the $i$th dimension) under $C$. Since $C$ measures the overall transformation under $B$ followed by $A$, $\hat{v_i}$ under $C$ is
@@ -541,15 +559,14 @@ A \cdot (B \cdot \hat{v_i}) &= \notag A \cdot
     b_{mn} \\
   \end{matrix}
 \right] \cdot b_{ni} \notag \\ \notag &=
-
 \left[\begin{matrix}
 a_{11}b_{1i}+\cdots+a_{1n}b_{ni}\\a_{21}b_{1i}+\cdots+a_{2n}b_{ni}\\\vdots \\
-a_{m1}b_{1i}+\cdots+a_{mn}b_{ni}\\\end{matrix}\right] \\ \notag &=
+a_{m1}b_{1i}+\cdots+a_{mn}b_{ni}\\\end{matrix}\right] \\ \notag\\ &=
 \left[
   \begin{matrix}
-    c_{1i} \\
-    c_{2i} \\
-    \vdots \\
+    c_{1i} \\\
+    c_{2i} \\\
+    \vdots \\\
     c_{mi} \\
   \end{matrix}
 \right]
@@ -563,7 +580,8 @@ We can see that the dot product of the $i$th row vector in $A$ and the $j$th col
 By horizontally stacking the transformed vectors of every standard unit vector in the standard basis of the $p$-dimensional space, we get
 
 $$
-A \cdot B = \left[\begin{matrix}a_{11}b_{11}+\cdots +a_{1n}b_{n1}&a_{11}b_{12}+\cdots +a_{1n}b_{n2}&\cdots &a_{11}b_{1p}+\cdots +a_{1n}b_{np}\\a_{21}b_{11}+\cdots +a_{2n}b_{n1}&a_{21}b_{12}+\cdots +a_{2n}b_{n2}&\cdots &a_{21}b_{1p}+\cdots +a_{2n}b_{np}\\\vdots &\vdots &\ddots &\vdots \\a_{m1}b_{11}+\cdots +a_{mn}b_{n1}&a_{m1}b_{12}+\cdots +a_{mn}b_{n2}&\cdots &a_{m1}b_{1p}+\cdots +a_{mn}b_{np}\\\end{matrix}\right]
+A \cdot B = \left[\begin{matrix}a_{11}b_{11}+\cdots +a_{1n}b_{n1}&a_{11}b_{12}+\cdots +a_{1n}b_{n2}&\cdots &a_{11}b_{1p}+\cdots +a_{1n}b_{np}\\a_{21}b_{11}+\cdots +a_{2n}b_{n1}&a_{21}b_{12}+\cdots +a_{2n}b_{n2}&\cdots &a_{21}b_{1p}+\cdots +a_{2n}b_{np}\\\vdots &\vdots &\ddots &\vdots \\a_{m1}b_{11}+\cdots +a_{mn}b_{n1}&a_{m1}b_{12}+\cdots +a_{mn}b_{n2}&\cdots & a_{m1}b_{1p}+ \cdots +a_{mn}b_{np}\\
+\end{matrix}\right]
 $$
 
 which is the general formula for matrix multiplication. 
@@ -583,7 +601,25 @@ where the number of rows in $B$ is equal to $n$. In other words, it represents t
 In order to do so, $I_n$ must be a matrix with **1s on the main diagonal and 0s elsewhere** such that
 
 $$
-I_{1} ={\begin{bmatrix}1\end{bmatrix}},\ I_{2}={\begin{bmatrix}1&0\\0&1\end{bmatrix}},\ I_{3}={\begin{bmatrix}1&0&0\\0&1&0\\0&0&1\end{bmatrix}},\ \dots ,\ I_{n}={\begin{bmatrix}1&0&0&\cdots &0\\0&1&0&\cdots &0\\0&0&1&\cdots &0\\\vdots &\vdots &\vdots &\ddots &\vdots \\0&0&0&\cdots &1\end{bmatrix}}
+I_{1} ={
+\begin{bmatrix}1
+\end{bmatrix}}, 
+\space I_{2}={
+\begin{bmatrix}1&0\\\
+0&1\\
+\end{bmatrix}}, 
+\space I_{3}={
+\begin{bmatrix}1&0&0\\\
+0&1&0\\\
+0&0&1\\
+\end{bmatrix}},
+\dots ,
+\space I_{n}={
+\begin{bmatrix}1&0&0&\cdots &0\\\
+0&1&0&\cdots &0\\\
+0&0&1&\cdots &0\\\
+\vdots &\vdots &\vdots &\ddots &\vdots \\\
+0&0&0&\cdots &1\end{bmatrix}}
 $$
 
 - **Note**: you can verify by performing a multiplication of the identity matrix with a vector or matrix!
@@ -618,8 +654,8 @@ where $n$ is the no. of dimensions in $\vec{x}$.
 
 If $A = \left[
   \begin{matrix}
-    3 & 1 \\
-    1 & 2 \\
+    3 & 1 \\\
+    1 & 2 \\\
   \end{matrix}
 \right]$, we have
 
@@ -647,11 +683,10 @@ To find $A^{-1}$, we know
 
 $$
 \begin{align}
-3a + b = 1 \\
-a + 2b = 0  \\
-3c + d = 0 \\
-c + 2d = 1
-
+3a + b = 1 \\\
+a + 2b = 0  \\\
+3c + d = 0 \\\
+c + 2d = 1 \\\
 \end{align}
 $$
 
