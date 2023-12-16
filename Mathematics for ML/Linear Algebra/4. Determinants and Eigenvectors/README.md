@@ -35,7 +35,7 @@ The n-dimensional nonsingular matrix transforms the unit n-cube to a n-dimension
 
 If the determinant of the square matrix is **negative**, it means that it represents a transformation that **reverses** the orientation of the n-dimensional space.
 
-Determinant of a matrix product
+<u>Determinant of a matrix product</u>
 
 By viewing the determinants as a scaling of volume, this allows us to understand why 
 
@@ -49,7 +49,7 @@ As the matrix multiplication simply represents **sequential linear transformatio
 
 Moreover, if either $A$ or $B$ is singular, its determinant will be equal to zero which will result in the matrix product to be singular as well. 
 
-Determinant of inverse matrices
+<u>Determinant of inverse matrices</u>
 
 If $A$ is a square matrix,
 
@@ -62,7 +62,15 @@ where $A^{-1}$ is the inverse matrix of $A$
 As such, the determinant of $A\cdot A^{-1}$ will always be equal to 1. This is because the multiplication of a matrix and its inverse will always return the **identity matrix which has a determinant of 1**
 
 $$
-A\cdot A^{-1} = I_{n} ={\begin{bmatrix}1&0&0&\cdots &0\\0&1&0&\cdots &0\\0&0&1&\cdots &0\\\vdots &\vdots &\vdots &\ddots &\vdots \\0&0&0&\cdots &1\end{bmatrix}}
+A\cdot A^{-1} = I_{n} = {
+    \begin{bmatrix}
+    1 & 0 & 0 & \cdots & 0 \\
+    0 & 1 & 0 & \cdots & 0 \\
+    0 & 0& 1 & \cdots & 0 \\
+    \vdots & \vdots & \vdots & \ddots & \vdots \\
+    0 & 0 & 0 & \cdots & 1
+    \end{bmatrix}
+}
 $$
 
 The more intuitive explanation for this observation is that the inverse of a matrix represents the **reverse** of the linear transformation performed by the original matrix. This results in no scaling of the volume of the n-dimensional space.
@@ -82,13 +90,20 @@ What if we want to use different vectors as the basis for defining elements with
 For example, lets say $V$ is a vector space over $\R^2$. We can define our basis vectors to be 
 
 $$
-\vec{v} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \vec{w} = \begin{bmatrix} 1 \\3\end{bmatrix}
+\vec{v} = 
+\begin{bmatrix} 2 \\
+1 
+\end{bmatrix}, 
+\vec{w} = 
+\begin{bmatrix} 1 \\
+3
+\end{bmatrix}
 $$
 
 such that
 
 $$
-B = \left\{
+B = \{
 \begin{bmatrix}
 2 \\
 1
@@ -97,7 +112,7 @@ B = \left\{
 1 \\
 3
 \end{bmatrix}
-\right\}
+\}
 $$
 
 is the basis for $V$
@@ -116,12 +131,15 @@ $$
 where $a_1$ and $a_2$ are scalars and the coordinate vector of $\vec{x}$ in the basis $B$ is
 
 $$
-[\vec{x}]_B = \begin{bmatrix}1 \\ 1\end{bmatrix}
+[\vec{x}]_B = 
+\begin{bmatrix} 1 \\
+1 \\
+\end{bmatrix}
 $$
 
 Therefore, we have defined an **alternate coordinate system** with $\vec{v}$ and $\vec{w}$ as its axes. For example, to reach $(3,4)$ in the standard coordinate system, we need one unit of $\vec{v}$ and one unit of $\vec{w}$.
 
-Change of Basis
+<u>Change of Basis</u>
 
 Now we understand the concept of changing from the standard basis vectors to another set of basis vectors, how do we actually translate between coordinate systems?
 
@@ -136,13 +154,28 @@ This allows us to translate any vectors represented by basis $B$ back to vectors
 The transformation matrix for changing from a vector from the standard basis to $B$ is simply the matrix formed by horizontally stacking the basis vectors
 
 $$
-A = \begin{bmatrix} 2 & 1 \\ 1& 3 \end{bmatrix}
+A = 
+\begin{bmatrix} 
+2 & 1 \\
+1 & 3 
+\end{bmatrix}
 $$
 
 To verify this, we can use the previous example
 
 $$
-\begin{bmatrix} 2 & 1 \\ 1 & 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 1 \end{bmatrix} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}
+\begin{bmatrix} 
+2 & 1 \\
+1 & 3 
+\end{bmatrix} \cdot 
+\begin{bmatrix} 
+1 \\ 
+1 
+\end{bmatrix} = 
+\begin{bmatrix} 
+3 \\ 
+4 
+\end{bmatrix}
 $$
 
 ## Linear Span
@@ -272,7 +305,7 @@ $$
 
 ## Eigenbasis
 
-Diagonal Matrices
+<u>Diagonal Matrices</u>
 
 Before understand what **eigenbasis** are, I want to introduce the importance of diagonal matrices. A **diagonal matrix** $D$  is a m-by-n matrix with all the entries not of the form $d_{ij}$ being zero; the only nonzero entries are in the main diagonal. For example
 
@@ -303,7 +336,7 @@ diag(a_1,...,a_n) * diag(b_1,...,b_n) = diag(a_1b_1,...,a_nb_n)\\
 \implies [diag(a_1,...,a_n)]^n = diag(a_1^n,...,a_n^n)
 $$
 
-What is the Eigenbasis?
+<u>What is the Eigenbasis?</u>
 
 Earlier, we learnt that a change of basis allows us to define an alternate coordinate systems with a set of vectors as its basis. 
 
@@ -331,32 +364,64 @@ $$
 the eigenvectors and eigenvalues of $A$ are
 
 $$
-\vec{v_1} = \begin{bmatrix}1 \\ 0\end{bmatrix}, \vec{v_2} = \begin{bmatrix}-1 \\ 1\end{bmatrix}, \lambda_1 = 3, \lambda_2 = 2
+\vec{v_1} = 
+\begin{bmatrix}
+1 \\
+0 \\
+\end{bmatrix},
+\vec{v_2} = 
+\begin{bmatrix}
+-1 \\
+1 \\
+\end{bmatrix}, \lambda_1 = 3, \lambda_2 = 2
 $$
 
 we can then define the eigenbasis as
 
 $$
-E = \begin{bmatrix}1 & -1 \\ 0 & 1\end{bmatrix}
+E = 
+\begin{bmatrix}
+1 & -1 \\
+0 & 1 \\
+\end{bmatrix}
 $$
 
 Given that we have to find out the linear transformation of a vector using $A$. We can pretend that the vector was defined under the eigenbasis
 
 $$
-[\vec{x}]_E = \begin{bmatrix}1 \\ 2\end{bmatrix}
+[\vec{x}]_E = 
+\begin{bmatrix} 1 \\
+2 \\
+\end{bmatrix}
 $$
 
 We know that translating $[\vec{x}]_E$ to the standard basis involves a linear transformation using the change of basis matrix, in this case the eigenbasis. That means
 
 $$
-E\cdot [\vec{x}]_E =\begin{bmatrix}1 & -1 \\ 0 & 1\end{bmatrix}\cdot \begin{bmatrix}1 \\ 2\end{bmatrix} = \vec{v_1} + 2\vec{v_2}
+E\cdot [\vec{x}]_E =
+\begin{bmatrix}
+1 & -1 \\
+0 & 1 \\
+\end{bmatrix} \cdot 
+\begin{bmatrix} 1 \\
+2 \\
+\end{bmatrix} = \vec{v_1} + 2\vec{v_2}
 $$
 
 If we also want to know what $[\vec{x}]_E$ will be when transformed by $A$ under the standard basis
 
 $$
 A \cdot E\cdot [\vec{x}]_E =
-\begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix}1 & -1 \\ 0 & 1\end{bmatrix} \cdot \begin{bmatrix}1 \\ 2\end{bmatrix} = A \cdot (\vec{v_1} + 2\vec{v_2}) 
+\begin{bmatrix} 3 & 1 \\ 
+0 & 2 \\
+\end{bmatrix} 
+\begin{bmatrix} 1 & -1 \\ 
+0 & 1 \\
+\end{bmatrix}
+\cdot 
+\begin{bmatrix} 1 \\
+2 \\
+\end{bmatrix} = A \cdot (\vec{v_1} + 2\vec{v_2}) 
 $$
 
 We know that $E\cdot[\vec{x}]_E$ is formed by a linear combination of the eigenvectors $\vec{v_1} + 2\vec{v_2}$. We also know that the eigenvectors are only scaled by their eigenvalues during the linear transformation, therefore
@@ -369,20 +434,47 @@ Then we translate it back to under the eigenbasis by multiplying it with the inv
 
 $$
 E^{-1} \cdot A \cdot E\cdot [\vec{x}]_E =
-\begin{bmatrix}1 & 1 \\ 0 & 1\end{bmatrix} 
-\begin{bmatrix} 3 & 1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix}1 & -1 \\ 0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 2\end{bmatrix} = E^{-1}(3\vec{v_1} + 4\vec{v_2} )
+\begin{bmatrix}
+1 & 1 \\ 
+0 & 1 \\
+\end{bmatrix} 
+\begin{bmatrix} 
+3 & 1 \\ 
+0 & 2 \\
+\end{bmatrix} 
+\begin{bmatrix} 1 & -1 \\ 
+0 & 1 \\
+\end{bmatrix}
+\begin{bmatrix} 1 \\ 
+2 \\
+\end{bmatrix} = E^{-1}(3\vec{v_1} + 4\vec{v_2} )
 $$
 
 Without completing the confusing matrix multiplications, we can intuitively infer that
 
 $$
-E^{-1}(3\vec{v_1} + 4\vec{v_2}) = \begin{bmatrix}3 \\ 4\end{bmatrix} 
+E^{-1}(3\vec{v_1} + 4\vec{v_2}) = 
+\begin{bmatrix} 
+3 \\ 
+4 \\
+\end{bmatrix} 
 $$
 
 because $\vec{v_1}$ and $\vec{v_2}$ are the coordinates under the eigenbasis. This means that
 
 $$
-E^{-1} \cdot A \cdot E \cdot [\vec{x}]_E = \begin{bmatrix}3 & 0 \\ 0 & 2\end{bmatrix} \begin{bmatrix}1 \\ 2\end{bmatrix} = \begin{bmatrix}3 \\ 4\end{bmatrix}
+E^{-1} \cdot A \cdot E \cdot [\vec{x}]_E = 
+\begin{bmatrix}
+3 & 0 \\ 
+0 & 2 \\
+\end{bmatrix} 
+\begin{bmatrix} 1 \\
+2 \\
+\end{bmatrix} = 
+\begin{bmatrix}
+3 \\ 
+4 \\
+\end{bmatrix}
 $$
 
 The important thing to note here is that $A^{-1} \cdot A \cdot E$ is a **diagonal matrix** with the eigenvalues forming the diagonal. 
@@ -390,12 +482,18 @@ The important thing to note here is that $A^{-1} \cdot A \cdot E$ is a **diagona
 This process is called **diagonalization**. We managed to transform $A$ into a diagonal matrix. In general
 
 $$
-P^{-1}\cdot A \cdot P={\begin{bmatrix}\lambda _{1}&0&\cdots &0\\0&\lambda _{2}&\cdots &0\\\vdots &\vdots &\ddots &\vdots \\0&0&\cdots &\lambda _{n}\end{bmatrix}}
+P^{-1}\cdot A \cdot P=
+{\begin{bmatrix}
+\lambda _{1} & 0 & \cdots & 0 \\ 
+0 & \lambda _{2} & \cdots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0& \cdots & \lambda _{n}
+\end{bmatrix}}
 $$
 
 where $P$ an **invertible** (non-singular) matrix formed by the eigenvectors of $A$
 
-Why is Diagonalization useful?
+<u>Why is Diagonalization useful?</u>
 
 Suppose we want to calculate $A^n$. If we used the original matrix, it becomes significantly more **computationally expensive** as $n$ increases.
 
