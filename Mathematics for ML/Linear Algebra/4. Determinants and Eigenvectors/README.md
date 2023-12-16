@@ -513,7 +513,10 @@ where $a_i$ is the i-th the diagonal value of $D$. Moreover,
 
 $$
 \begin{align}
-D^n &= (E^{-1} \cdot A \cdot  \notag E)^n\\ &= (E^{-1} \cdot A \cdot E)\cdot (E^{-1} \cdot A \cdot E) \dots \cdot (E^{-1} \cdot A \cdot E) \notag \\ &= \notag E^{-1} \cdot A^n \cdot E
+D^n 
+&= (E^{-1} \cdot A \cdot E)^n \\
+&= \notag (E^{-1} \cdot A \cdot E)\cdot (E^{-1} \cdot A \cdot E) \dots \cdot (E^{-1} \cdot A \cdot E) \\ 
+&= \notag E^{-1} \cdot A^n \cdot E \\
 \end{align}
 $$
 
