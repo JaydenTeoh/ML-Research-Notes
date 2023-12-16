@@ -23,6 +23,7 @@ My interests in ML span areas such as:
 
 ## Latest updates
 
+- 17/12/2023 - [Determinants and Eigenvectors](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Linear%20Algebra/4.%20Determinants%20and%20Eigenvectors) [Linear Algebra]
 - 14/12/2023 - [Linear Transformation](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Linear%20Algebra/3.%20Linear%20Transformations) [Linear Algebra]
 - 12/12/2023 - [Solving Linear Systems](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Linear%20Algebra/2.%20Solving%20Linear%20Systems) [Linear Algebra]
 - 11/12/2023 - [Systems of Linear Equations](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Linear%20Algebra/1.%20System%20of%20Linear%20Equations) [Linear Algebra]
