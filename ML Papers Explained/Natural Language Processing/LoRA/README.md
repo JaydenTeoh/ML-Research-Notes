@@ -4,7 +4,7 @@ Link to original paper: [https://arxiv.org/abs/2106.09685](https://arxiv.org/abs
 
 ## What is LoRA
 
-The Problem
+<u>The Problem</u>
 
 In Natural Language Processing, we often have to **fine-tune** pre-trained language models to perform better at specific tasks (e.g. train a GPT-3 model to be better at solving math problems). 
 
@@ -22,7 +22,7 @@ However, these solutions often introduce **inference latency** (time taken for m
 
 Moreover, these methods often compromise the model quality.
 
-Hypothesis of LoRA 
+<u>Hypothesis of LoRA</u>
 
 The authors hypothesise that the change in weights during fine-tuning has a **low “intrinsic rank”**, i.e. the weights changes during adaptation might reside in a lower-dimensional subspace compared to the full parameter space, allowing for efficient low-rank approximations
 
@@ -83,7 +83,8 @@ $$
 It is straightforward to check that
 
 $$
-\Delta W = \begin{bmatrix}
+\Delta W = 
+\begin{bmatrix}
 1 & 2 & 3 & 4 & 5 \\
 2 & 4 & 6 & 8 & 10 \\
 2 & 5 & 7 & 4 & 8 \\
@@ -97,7 +98,8 @@ $$
 \end{bmatrix}
 \begin{bmatrix}
 1 & 0 & 1 & 12 & 9 \\
-0 & 1 & 1 & -4 & -2 \\\end{bmatrix} =
+0 & 1 & 1 & -4 & -2 \\
+\end{bmatrix} =
 CF
 $$
 
@@ -113,7 +115,7 @@ In principle, we can apply LoRA to any trainable weight matrices in a neural net
 
 ![Untitled](images/Untitled.png)
 
-Key Difference between Full Fine-tuning and LoRA
+<u>Key Difference between Full Fine-tuning and LoRA</u>
 
 The formula for updating the weights in a single backpropagation is
 
