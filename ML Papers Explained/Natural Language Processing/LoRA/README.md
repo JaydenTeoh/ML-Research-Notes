@@ -24,9 +24,9 @@ Moreover, these methods often compromise the model quality.
 
 <ins>Hypothesis of LoRA</ins>
 
-The authors hypothesise that the change in weights during fine-tuning has a **low “intrinsic rank”**, i.e. the weights changes during adaptation might reside in a lower-dimensional subspace compared to the full parameter space, allowing for efficient low-rank approximations
+The authors hypothesise that the change in weights during fine-tuning has a **low “intrinsic rank”**, i.e. the weights changes during adaptation might reside in a lower-dimensional subspace compared to the full parameter space, allowing for efficient low-rank approximations.
 
-The rank of a matrix refers to the number of linearly independent rows/columns in that matrix. Pretend that an arbitrary layer in your pretrained model has 5000 nodes and it takes in a 100-dimensional input → the weight matrix has 100 rows and 5000 columns. During pre-training, the nature of the updates to the weight matrix can be reduced in a lower-dimensional subspace (i.e. the important changes can be concentrated within a few rows and columns). Let’s use an example, pretend you have a 4x5 matrix $\Delta W$ which represents the weight updates during a single instance of backpropagation
+The rank of a matrix refers to the number of linearly independent rows/columns in that matrix. Let’s use an example, pretend you have a 4x5 matrix $\Delta W$ which represents the weight updates during a single instance of backpropagation
 
 $$
 \Delta W =
