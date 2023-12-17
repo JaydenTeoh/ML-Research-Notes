@@ -103,7 +103,7 @@ $$
 CF
 $$
 
-As you can see, $\Delta W$ has $4 \times 5 = 20$ elements but $C$ and $F$ has $4 \times 2 \space + 2 \times 4 = 16$ elements. We managed to factorise $\Delta W$ into $CF$ because it has a “low intrinsic rank”.
+As you can see, $\Delta W$ has $4 \times 5 = 20$ elements but $C$ and $F$ has $4 \times 2 \space + 2 \times 4 = 16$ elements. We managed to factorise $\Delta W$ into smaller matrices $C$ and $F$ because it is a low-rank matrix.
 
 - **Note**: If you are unfamiliar with linear algebra and rank of matrices, you can check out some of the notes I have [here](https://www.notion.so/Linear-Algebra-78eeeef8cf3e4c2d8eee0796b4c6d786?pvs=21).
 
