@@ -107,7 +107,7 @@ As you can see, $\Delta W$ has $4 \times 5 = 20$ elements but $C$ and $F$ has $4
 
 - **Note**: If you are unfamiliar with linear algebra and rank of matrices, you can check out some of the notes I have [here](https://www.notion.so/Linear-Algebra-78eeeef8cf3e4c2d8eee0796b4c6d786?pvs=21).
 
-That is essentially the idea behind LoRA. The authors believe that the weight updates in a dense layer during fine-tuning can be represented using the matrix multiplication of smaller matrices. Therefore, rather than training the pre-trained weights, LoRA keeps them frozen and train the layers by optimising the rank decomposition matrices instead.
+That is essentially the idea behind LoRA. The authors believe that the weight changes during fine-tuning has an intrinsically low rank, whcih means it can be decomposed into much smaller matrices. Moreover, rather than updating the pre-trained weights directly, LoRA keeps them frozen and optimise the rank decomposition matrices separately instead (I will mention more about this in the methodology below).
 
 In principle, we can apply LoRA to any trainable weight matrices in a neural network. For e.g., the authors applied LoRA to transformers such as GPT-2, GPT-3 and RoBERTa, and was in fact able to outperform several baselines including full fine-tuning.
 
