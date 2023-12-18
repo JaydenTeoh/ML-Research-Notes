@@ -121,10 +121,10 @@ The slope of the function between two points is given by
 $$
 \begin{align}
 \notag
-\frac{\Delta y}{\Delta x} &= \frac{f(x + \Delta x) - f(x)}{\Delta x} \\ \notag
-&= \frac{(x + \Delta x)^2 - x^2}{\Delta x} \\ \notag
-&= \frac{x^2 + 2x\Delta x + \Delta x^2 - x^2}{\Delta x} \\ \notag
-&= \frac{2x\Delta x + \Delta x^2}{\Delta x} \\ \notag
+\frac{\Delta y}{\Delta x} &= \frac{f(x + \Delta x) - f(x)}{\Delta x} \\\ \notag
+&= \frac{(x + \Delta x)^2 - x^2}{\Delta x} \\\ \notag
+&= \frac{x^2 + 2x\Delta x + \Delta x^2 - x^2}{\Delta x} \\\ \notag
+&= \frac{2x\Delta x + \Delta x^2}{\Delta x} \\\ \notag
 &= 2x + \Delta x
 \end{align}
 $$
@@ -150,10 +150,10 @@ The slope of the function between two points is given by
 $$
 \begin{align}
 \notag
-\frac{\Delta y}{\Delta x} &= \frac{f(x + \Delta x) - f(x)}{\Delta x} \\ \notag
-&= \frac{(x + \Delta x)^3 - x^3}{\Delta x} \\ \notag
-&= \frac{x^3 + 3x^2\Delta x + 3x\Delta x^2 + \Delta x^3 - x^3}{\Delta x} \\ \notag
-&= \frac{3x^2\Delta x + 3x\Delta x^2 + \Delta x^3}{\Delta x} \\ \notag
+\frac{\Delta y}{\Delta x} &= \frac{f(x + \Delta x) - f(x)}{\Delta x} \\\ \notag
+&= \frac{(x + \Delta x)^3 - x^3}{\Delta x} \\\ \notag
+&= \frac{x^3 + 3x^2\Delta x + 3x\Delta x^2 + \Delta x^3 - x^3}{\Delta x} \\\ \notag
+&= \frac{3x^2\Delta x + 3x\Delta x^2 + \Delta x^3}{\Delta x} \\\ \notag
 &= 2x^2 + 3x\Delta x + \Delta x^2
 \end{align}
 $$
@@ -179,10 +179,10 @@ The slope of the function between two points is given by
 $$
 \begin{align}
 \notag
-\frac{\Delta y}{\Delta x} &= \frac{f(x + \Delta x) - f(x)}{\Delta x} \\ \notag
-&= \frac{(x + \Delta x)^{-1} - x^{-1}}{\Delta x} \\ \notag
-&= \frac{\frac{1}{x + \Delta x} - \frac{1}{x}}{\Delta x} \\ \notag
-&= \frac{\frac{x -x -\Delta x}{x(x + \Delta x)}}{\Delta x} \\ \notag
+\frac{\Delta y}{\Delta x} &= \frac{f(x + \Delta x) - f(x)}{\Delta x} \\\ \notag
+&= \frac{(x + \Delta x)^{-1} - x^{-1}}{\Delta x} \\\ \notag
+&= \frac{\frac{1}{x + \Delta x} - \frac{1}{x}}{\Delta x} \\\ \notag
+&= \frac{\frac{x -x -\Delta x}{x(x + \Delta x)}}{\Delta x} \\\ \notag
 &= -\frac{1}{x^2 +x\Delta x}
 \end{align}
 $$
@@ -308,10 +308,10 @@ We want to differentiate this
 
 $$
 \begin{align} \notag
-f'(x) &= \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \\ \notag
-&= \lim_{h \to 0} \frac{a^{x+h} - a^x}{h} \\ \notag
-&= \lim_{h \to 0} \frac{a^{x}a^h - a^x}{h} \\ \notag
-&= \lim_{h \to 0} \frac{a^{x}(a^h - 1)}{h} \\ \notag
+f'(x) &= \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \\\ \notag
+&= \lim_{h \to 0} \frac{a^{x+h} - a^x}{h} \\\ \notag
+&= \lim_{h \to 0} \frac{a^{x}a^h - a^x}{h} \\\ \notag
+&= \lim_{h \to 0} \frac{a^{x}(a^h - 1)}{h} \\\ \notag
 &= a^{x}\lim_{h \to 0} \frac{a^h - 1}{h}
 \end{align}
 $$
@@ -368,7 +368,7 @@ $$
 
 <ins>Natural Logarithm</ins>
 
-The **natural logarithm** of a number is its logarithm to the base of the mathematical constant $e$. The natural logarithm of $x$ is generally written as $\ln{x}$, $\log_e{x}$, or simply $\log{x}$ when the base $e$ is implicit. Since the logarithm is the inverse function to exponentiation, if
+The **natural logarithm** of a number is its logarithm to the base of the mathematical constant $ e$. The natural logarithm of $x$ is generally written as $\ln{x}$, $\log_e{x}$, or simply $\log{x}$ when the base $e$ is implicit. Since the logarithm is the inverse function to exponentiation, if
 
 $$
 f(x) = e^x
@@ -500,7 +500,7 @@ then
 
 $$
 \begin{align} \notag
-f'(t) &= \frac{dg}{dh} \cdot \frac{dh}{dt} \\ \notag 
+f'(t) &= \frac{dg}{dh} \cdot \frac{dh}{dt} \\\ \notag 
 &= g'(h(t)) \cdot h'(t)
 \end{align}
 $$
