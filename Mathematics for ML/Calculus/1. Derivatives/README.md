@@ -368,7 +368,7 @@ $$
 
 <ins>Natural Logarithm</ins>
 
-The **natural logarithm** of a number is its logarithm to the base of the mathematical constant $ e$. The natural logarithm of $x$ is generally written as $\ln{x}$, $\log_e{x}$, or simply $\log{x}$ when the base $e$ is implicit. Since the logarithm is the inverse function to exponentiation, if
+The **natural logarithm** of a number is its logarithm to the base of the mathematical constant $e$. The natural logarithm of $x$ is generally written as $\ln{x}$, $\log_e{x}$, or simply $\log{x}$ when the base $e$ is implicit. Since the logarithm is the inverse function to exponentiation, if
 
 $$
 f(x) = e^x
