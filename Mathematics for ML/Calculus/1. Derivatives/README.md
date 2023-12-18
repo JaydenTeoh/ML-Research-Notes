@@ -268,8 +268,10 @@ Image from [Lumen Learning](https://courses.lumenlearning.com/ccbcmd-math-1/chap
 The sine of the angle allows us to know the $y$-coordinate of the point along a circle and the cosine of the angle allows us to know the $x$-coordinate of the point along the circle. As we learnt in high school,
 
 $$
-sin\theta = \frac{Opp.}{Hyp.}\\
+\begin{align}
+sin\theta = \frac{Opp.}{Hyp.} \\\
 cos\theta = \frac{Adj.}{Hyp.}
+\end{align}
 $$
 
 Given a unit circle (radius equals 1), the sine and cosine values are directly equal to the height and width of the triangle as the hypotenuse is always equal to 1.
@@ -549,12 +551,12 @@ $$
 We can see that
 
 $$
-\begin{align} \notag
-f'(t) &= \text{Speed of car} \\ \notag
-&= \frac{d \space \text{Distance by car}}{d\space \text{Distance by bicycle}} \cdot \text{Speed of bicycle} \\ \notag
-&= \frac{dg}{dh} \cdot \frac{dh}{dt} \\ \notag
-&= g'(h(t)) \cdot h'(t) \\ \notag
-&= \frac{4km}{2km} \cdot 2km/h \\ \notag
+\begin{align}
+f'(t) &= \notag \text{Speed of car} \\\ \notag
+&= \frac{d \space \text{Distance by car}}{d\space \text{Distance by bicycle}} \cdot \text{Speed of bicycle} \\\ \notag
+&= \frac{dg}{dh} \cdot \frac{dh}{dt} \\\ \notag
+&= g'(h(t)) \cdot h'(t) \\\ \notag
+&= \frac{4km}{2km} \cdot 2km/h \\\ \notag
 &= 4km/h
 \end{align}
 $$
