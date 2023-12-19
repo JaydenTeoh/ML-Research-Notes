@@ -265,7 +265,7 @@ But is there a more intuitive way to understand this? Let’s first try to under
 
 Image from [Lumen Learning](https://courses.lumenlearning.com/ccbcmd-math-1/chapter/unit-circle/)
 
-The sine of the angle allows us to know the $y$-coordinate of the point along a circle and the cosine of the angle allows us to know the $x$-coordinate of the point along the circle. As we learnt in high school,
+The sine of the angle allows us to know the ratio of the $y$-coordinate of the point to the radius and the cosine of the angle allows us to know the ratio of the $x$-coordinate of the point to the radius. As we learnt in high school,
 
 $$
 \begin{align}
@@ -576,3 +576,81 @@ In extension,
 $$
 \frac{d}{dt}f(g(h(t))) = f'(g(h(t))) \cdot g'(h(t)) \cdot h'(t)
 $$
+
+## Implicit Differentiation
+
+Some relationships cannot be represented by an **explicit function**, i.e. they cannot be expressed as **“y is equal to some function of x”**
+
+$$
+y = f(x)
+$$
+
+These functions are known as implicit equations. 
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/08959e15-0e33-4507-aa75-1af76d5f36e2/e9c17b38-be0d-49e0-a3a4-24305e9ac2e0/Untitled.png)
+
+For example, the implicit equation of a circle with radius equals 5 is
+
+$$
+x^2 + y^2 = 5^2
+$$
+
+Even if we know the value of $x$, we don’t know the value of $y$ because there are multiple solutions for $y$ (can be negative or positive because of the square). Implicit differentiation helps us find $\frac{dy}{dx}$ in situations like that. 
+
+ Let $S$ be the function representing
+
+$$
+S(x,y) = x^2 + y^2
+$$
+
+When 
+
+$$
+S(x,y) = 5^2
+$$
+
+we know that the $x$ and $y$ corresponds to a point along the circle.
+
+We then ask ourselves, for an infinitesimal change in $x$, i.e. $dx$, how much does $S$ change → $\frac{d}{dx}(S(x,y))$
+
+And because we want there to be no change to $S(x,y)$ such that it remains on the circle, therefore the derivative relative to $x$ of the LHS should be the same as that to the RHS
+
+$$
+\frac{d}{dx}(S(x,y)) = \frac{d}{dx}(5^2)
+$$
+
+Let’s solve each term:
+
+1. Using Power Rule we get
+
+$$
+\frac{d}{dx}(x^2) = 2x \\
+
+$$
+
+1. The Chain Rule says
+
+$$
+\begin{align} \notag
+\frac{dz}{dx} = \frac{dz}{dy}\frac{dy}{dx} \\ \notag
+\implies \frac{d}{dx}(y^2) &= \frac{d}{dy}(y^2)\frac{dy}{dx} \\ \notag
+&= 2y\frac{dy}{dx}
+\end{align}
+$$
+
+1. Lastly
+
+$$
+\frac{d}{dx}(5^2) = 0
+$$
+
+As such, when we bring them together we get
+
+$$
+\begin{align} \notag
+2x + 2y\frac{dy}{dx} = 0 \\ \notag
+\implies \frac{dy}{dx} = \frac{-x}{y}
+\end{align}
+$$
+
+We could have done it the other way, where we find the $\frac{d}{dy}(S(x,y))$ and we will get $\frac{dx}{dy}$. The key thing is that because $y$ and $x$ are both dependent on one another, when we find the derivative of the equation w.r.t. either of them, we are bound to include the derivative of one variable relative to other ($\frac{dy}{dx}$ or $\frac{dx}{dy}$).
