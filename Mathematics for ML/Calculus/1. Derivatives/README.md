@@ -624,16 +624,16 @@ Let’s solve each term:
 1. Using Power Rule we get
 
 $$
-\frac{d}{dx}(x^2) = 2x \\
-
+\frac{d}{dx}(x^2) = 2x
 $$
 
 1. The Chain Rule says
 
 $$
-\begin{align} \notag
-\frac{dz}{dx} = \frac{dz}{dy}\frac{dy}{dx} \\ \notag
-\implies \frac{d}{dx}(y^2) &= \frac{d}{dy}(y^2)\frac{dy}{dx} \\ \notag
+\begin{align}
+\frac{dz}{dx} &= \notag \frac{dz}{dy}\frac{dy}{dx} \\\ \notag \implies
+\frac{d}{dx}(y^2) 
+&= \frac{d}{dy}(y^2)\frac{dy}{dx} \\\ \notag
 &= 2y\frac{dy}{dx}
 \end{align}
 $$
@@ -647,9 +647,10 @@ $$
 As such, when we bring them together we get
 
 $$
-\begin{align} \notag
-2x + 2y\frac{dy}{dx} = 0 \\ \notag
-\implies \frac{dy}{dx} = \frac{-x}{y}
+\begin{align}
+2x + 2y\frac{dy}{dx} &= \notag 0 \\\ \notag
+\implies 
+\frac{dy}{dx} &= \frac{-x}{y}
 \end{align}
 $$
 
