@@ -36,9 +36,10 @@ First, let’s keep calculate the partial derivative relative to $x$ by keeping 
 
 $$
 \begin{align}
-\frac{\partial f}{\partial x} &= \notag \frac{\partial }{\partial x} (x^2y + \sin y) \\ \notag
-&= \frac{\partial }{\partial x} (x^2y) + \frac{\partial }{\partial x}(\sin y) \\ \notag
-&= 2xy +0
+\frac{\partial f}{\partial x} &= \notag
+\frac{\partial }{\partial x} (x^2y + \sin y) \\\ \notag
+&= \frac{\partial }{\partial x} (x^2y) + \frac{\partial }{\partial x}(\sin y) \\\ \notag
+&= 2xy +0 \\
 \end{align}
 $$
 
@@ -48,9 +49,10 @@ Similarly, we calculate partial derivative relative to $y$ by keeping $x$ as a c
 
 $$
 \begin{align}
-\frac{\partial f}{\partial y} &= \notag \frac{\partial }{\partial y} (x^2y + \sin y) \\ \notag
-&= \frac{\partial }{\partial y} (x^2y) + \frac{\partial }{\partial y}(\sin y) \\ \notag
-&= x^2 + \cos y
+\frac{\partial f}{\partial y} &= \notag 
+\frac{\partial }{\partial y} (x^2y + \sin y) \\\ \notag
+&= \frac{\partial }{\partial y} (x^2y) + \frac{\partial }{\partial y}(\sin y) \\\ \notag
+&= x^2 + \cos y \\
 \end{align}
 $$
 
@@ -219,8 +221,8 @@ If we want to travel from $p$ in the direction of greatest increase in $f$, we l
 
 Finding maxima and minima is the goal of mathematical **optimisation**. Given a function $f(x)$, 
 
-- **Local Maximum**: We can say $f$ has a global maximum at $x^*$ if $f(x^*) \geq f(x)$ for all $x$ in some **open interval** around $x^*$
-- **Local Minimum**: We can say $f$ has a global maximum at $x^*$ if $f(x^*) \leq f(x)$ for all $x$ in some **open interval** around $x^*$
+- **Local Maximum**: We can say $f$ has a global maximum at $x'$ if $f(x') \geq f(x)$ for all $x$ in some **open interval** around $x^*$
+- **Local Minimum**: We can say $f$ has a global maximum at $x'$ if $f(x') \leq f(x)$ for all $x$ in some **open interval** around $x^*$
 
 The **derivative** of the function at local maxima and minima are **zero**. In mathematics, a **critical point** is the argument of a function where the function derivative is zero. Therefore, the local maxima and minima are critical points
 
@@ -254,8 +256,8 @@ Global Minima/Maxima
 
 What about global maxima and minima?
 
-- **Global Maximum**: We can say $f$ has a global maximum at $x^*$ if $f(x^*) \geq f(x)$ for all $x$ in $X$
-- **Global Minimum**: We can say $f$ has a global minimum at $x^*$ if $f(x^*) \leq f(x)$ for all $x$ in $X$
+- **Global Maximum**: We can say $f$ has a global maximum at $x'$ if $f(x') \geq f(x)$ for all $x$ in $X$
+- **Global Minimum**: We can say $f$ has a global minimum at $x'$ if $f(x') \leq f(x)$ for all $x$ in $X$
 
 Note that global maxima and minima are **not necessarily** critical points. If the function is bounded (like the one above), global minimum and maximum can occur at the end of the intervals where the function derivative is not zero.
 
@@ -330,10 +332,12 @@ $$
 $$
 \alpha \nabla f(0,1) = 0.1
 \begin{bmatrix}
--6 \\ 2
+-6 \\\
+2
 \end{bmatrix} =
 \begin{bmatrix}
--0.6 \\ 0.2
+-0.6 \\\ 
+0.2
 \end{bmatrix}
 $$
 
