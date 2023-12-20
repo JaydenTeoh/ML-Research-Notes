@@ -166,7 +166,7 @@ Let’s plot this function. We can see that it intersects $(2,1,5)$ and becomes 
 
 ![Untitled](images/Untitled%203.png)
 
-Why the gradient is the direction of steepest ascent
+<ins>Why the gradient is the direction of steepest ascent</ins>
 
 The direction of the gradient vector $\nabla f(p)$ points in the direction of steepest ascent, i.e. the direction in which the function **increases most rapidly** at the given point.
 
@@ -250,7 +250,7 @@ $$
 
 this means that $x = 0$ and $y = 0$ → the minimum point occurs at (0,0,0)
 
-Global Minima/Maxima
+<ins>Global Minima/Maxima</ins>
 
 ![Untitled](images/Untitled%206.png)
 
@@ -297,7 +297,7 @@ $$
 
 ![gdescent.gif](images/gdescent.gif)
 
-But what makes a good learning rate?
+<ins>But what makes a good learning rate?</ins>
 
 For the gradient descent algorithm to reach the local minimum we must set the learning rate to an appropriate value, which is neither too low nor too high. This is important because if the steps it takes are too big, it may not reach the local minimum because it bounces back and forth between the convex function of gradient descent. If we set the learning rate to a very small value, gradient descent will eventually reach the local minimum but that may take a while
 
@@ -357,3 +357,59 @@ x_1 =
 $$
 
 Therefore, $x_1 = (0.6, 0.8)$
+
+## Linear Regression
+
+Linear Regression is one of the most common statistical technique used for modelling the relationship between a single dependent variable (scalar) and one or more independent variables.
+
+<ins>Simple Linear Regression</ins>
+
+![Untitled](images/Untitled%2011.png)
+
+Univariate linear regression focuses on determining relationship between **one independent (explanatory variable) variable and one dependent variable**
+
+Given a dataset of $n$ single-dimensional inputs $\{x_1,\dots,x_n\}$ and $n$ corresponding outputs $\{y_1,\dots,y_n\}$, a linear regression model assumes that the relationship between the dependent variable $y$ and independent variables $x$ is linear. Obviously, most often or not, the data do not actually follow a exact linear relationship. However, the model tries to draw a best-fit line (see the line in the image above) across the data points that best expresses the relationship. As such, the equation of the line can be represented as
+
+$$
+\hat y = \beta_0 +\beta x
+$$
+
+where $\beta_1$ is the slope of the line, $\beta_0$ is the $y$-intercept and $\hat y$ is the output for a corresponding $x$ (the model’s prediction).
+
+<ins>Multivariate Linear Regression</ins>
+
+![Untitled](images/Untitled%2012.png)
+
+Image from [MathWorks](https://www.mathworks.com/help/stats/regress.html)
+
+In multivariate linear regression, the input has 2 or more dimensions, i.e. $x = (x_1,\dots , x_p)$. The model then attempts to fit a **hyperplane** to the data instead of a line. The equation for the hyperplane can be represented as
+
+$$
+\hat y = \beta_0 + \beta_1x_1 + \dots + \beta_nx_p
+$$
+
+where $\beta_0$ is the intercept term, $\beta_1,\dots,\beta_n$ are the coefficients corresponding to each feature of the input and $\hat y$ is the model’s prediction. Essentially, these coefficients represent the weights assigned to each variable, indicating their impact on the output.
+
+<ins>But how do we determine what is the best-fit line or hyperplane?</ins> 
+
+![Untitled](images/Untitled%2013.png)
+
+Image from [Statology](https://www.statology.org/residuals/)
+
+To do so, we can use a common estimation method called **Ordinary Least Squares**
+
+The goal of ordinary least squares is to minimise the **sum of squared residuals**. The error $\epsilon$, or residual, measures the difference between a data point $y$ and the model’s prediction $\hat y$
+
+$$
+\epsilon = y - \hat y
+$$
+
+The sum of squared residuals is therefore
+
+$$
+\sum_{i=1}^n (y_i - \hat y) = \sum_{i=1}^n [y_i - (\beta_0 + \beta_1x_{i1} + \dots + \beta_nx_{ip})]
+$$
+
+To minimise the sum of squared residuals, we can adjust the weight (coefficient) of each variable. We can do so via **gradient descent** to iteratively find a local minima, or if the equation is simple enough, we can directly solve for the points where the derivative is zero.
+
+- **Note**: ordinary least squares is just one of the estimation techniques, there are other techniques used depending on the situation and type of data

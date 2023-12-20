@@ -587,7 +587,7 @@ $$
 
 These functions are known as implicit equations. 
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/08959e15-0e33-4507-aa75-1af76d5f36e2/e9c17b38-be0d-49e0-a3a4-24305e9ac2e0/Untitled.png)
+![Untitled](images/Untitled%2018.png)
 
 For example, the implicit equation of a circle with radius equals 5 is
 
