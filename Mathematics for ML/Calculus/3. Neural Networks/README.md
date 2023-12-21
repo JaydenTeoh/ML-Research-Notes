@@ -6,7 +6,7 @@ Perceptron is one of the simplest **a**rtificial neural network architectures. 
 
 A single layer perceptron takes several variables, $x_1,x_2,…,x_m$, and predicts a single output $\hat y$ based on a linear combination of these inputs followed by a non-linear function.
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled.png)
+![Untitled](images/Untitled.png)
 
 Weights, $w_1,w_2,…,w_m$, express the importance of the respective inputs to the output. The weighted sum of inputs $\sum_{j} w_jx_j$ added with a bias embodies a linear equation. The output of the linear equation is passed into a non-linear activation function to produce the final output $\hat y$. The equation of the output is as follow:
 
@@ -25,7 +25,7 @@ Why do we need activation functions? Most relationships between input and output
 
 Moreover, non-linearity are useful when we want to constrain our data within a certain range (e.g. probability between 0 and 1)
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%201.png)
+![Untitled](images/Untitled%201.png)
 
 A commonly used activation function is the **sigmoid function**.
 
@@ -83,7 +83,7 @@ $$
 
 where $N$ is the number of inputs and $y_i$ and $\hat {y_i}$ represents the ground truth and the predicted probability for the $i$-th input respectively
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%202.png)
+![Untitled](images/Untitled%202.png)
 
 - When the ground truth $y_i$ is 1, the cross-entropy loss approaches 0 as the predicted probability p approaches 1.
 - When the ground truth $y_i$ is 0, the the cross-entropy loss approaches 0 as the predicted probability p approaches 0.
@@ -107,7 +107,7 @@ $$
 
 Now we know the cost function that we want to **minimise**, ****let’s understand how we can minimise the loss by adjusting the weights and biases using gradient descent. To do so, we need to know the partial derivatives involved. Let’s take a look at the single-layer perceptron below.
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%203.png)
+![Untitled](images/Untitled%203.png)
 
 The model has 2 input features $x_1$,$x_2$ with their corresponding weights $w_1, w_2$ and a bias. It is also a binary classification model with a sigmoid activation function. As such, we will use the binary cross-entropy cost function to optimise the model.
 
@@ -212,7 +212,7 @@ where $\alpha$ is the learning rate.
 
 Multilayer perceptrons are neural networks with better **expressiveness** compared to single-layer perceptrons; it is better able to capture the complexity and variability of the data it is trained on. For example, the initial layers can capture low-level features, while deeper layers abstract higher-level features, creating a hierarchical representation. This hierarchical representation is more powerful in learning intricate patterns and variations in the data.
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%204.png)
+![Untitled](images/Untitled%204.png)
 
 The model above shows a multilayer perceptron with 1 input layer with 2 neurons, 1 output layer, and a **hidden layer** with 1 neuron. Each layer has their corresponding weights and bias. 
 
@@ -228,7 +228,7 @@ The derivative for the final layer weights are easy to calculate. Because of cha
 
 Newton’s method is a method which iteratively produces better approximations to the roots a function, where $f(x) = 0$.
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%205.png)
+![Untitled](images/Untitled%205.png)
 
 Given the graph of $f(x)$ above and our goal is to the find the root of the equation. We start from a random guess at $x_0$. 
 
@@ -272,7 +272,7 @@ $$
 a = \frac{dv}{dt} = \frac{d^2x}{dt^2}
 $$
 
-![Image from [Philip Lloyd](https://www.quora.com/What-is-the-reason-that-second-derivatives-when-equal-to-zero-fail-when-finding-an-extremum)](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%206.png)
+![Image from [Philip Lloyd](https://www.quora.com/What-is-the-reason-that-second-derivatives-when-equal-to-zero-fail-when-finding-an-extremum)](images/Untitled%206.png)
 
 Image from [Philip Lloyd](https://www.quora.com/What-is-the-reason-that-second-derivatives-when-equal-to-zero-fail-when-finding-an-extremum)
 
@@ -286,7 +286,7 @@ But in order to do so, we have to make sure that the loss function is **twice di
 
 Hessian Matrix
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%207.png)
+![Untitled](images/Untitled%207.png)
 
 For a function $f$, the Hessian matrix $H_f$ is a square matrix storing the **second-order partial derivatives** of the function. For a function with $n$ variables, the Hessian matrix is a $n \times n$ matrix defined as
 
@@ -344,7 +344,7 @@ $$
 f(x,y) = x^4 + 0.8y^4+4x^2+2y^2-xy-0.2x^2y
 $$
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%208.png)
+![Untitled](images/Untitled%208.png)
 
 The gradient of the function is
 
@@ -372,7 +372,7 @@ $$
 
 Let’s say we start at the point (4,4) and we want to use the Newton’s method to find the minima
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%209.png)
+![Untitled](images/Untitled%209.png)
 
 Subbing the $x$ and $y$ values we get
 
@@ -415,7 +415,7 @@ y_1
 
 $$
 
-![Untitled](Neural%20Networks%20c506758f46044df192df12285eac7a5c/Untitled%2010.png)
+![Untitled](images/Untitled%2010.png)
 
 We can see that the new point is much closer to the minima
 
