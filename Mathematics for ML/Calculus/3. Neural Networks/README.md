@@ -189,9 +189,9 @@ Therefore, the gradient descent formula would simply be
 
 $$
 \begin{bmatrix}
-w_{1_{\text{new}}} \\
-w_{2_{\text{new}}} \\
-b_{_{\text{new}}} \\
+w_1 \\
+w_2 \\
+b \\
 \end{bmatrix} =
 \begin{bmatrix}
 w_{1} \\
