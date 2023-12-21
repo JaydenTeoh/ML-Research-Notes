@@ -388,7 +388,7 @@ H_f =
 \end{bmatrix}
 $$
 
-That means the approximation to the minima of the function (root of the $f'(x,y) $ ) using Newton’s method is
+That means the approximation to the minima of the function (root of the $f'(x,y) $) using Newton’s method is
 
 $$
 \begin{bmatrix}
