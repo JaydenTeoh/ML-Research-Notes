@@ -17,7 +17,7 @@ $$
 - $\hat y$: Output
 - $g$: Non-linear activation function
 - $b$: Bias
-- $\sum_{i=1}^{m}x_iw_i$: Linear combination of inputs
+- $\sum_{i=1}^{m} x_iw_i$: Linear combination of inputs
 
 ### Activation Functions
 
@@ -109,7 +109,7 @@ Now we know the cost function that we want to **minimise**, ****let’s understa
 
 ![Untitled](images/Untitled%203.png)
 
-The model has 2 input features $x_1$,$x_2$ with their corresponding weights $w_1, w_2$ and a bias. It is also a binary classification model with a sigmoid activation function. As such, we will use the binary cross-entropy cost function to optimise the model.
+The model has 2 input features $x_1,x_2$ with their corresponding weights $w_1, w_2$ and a bias. It is also a binary classification model with a sigmoid activation function. As such, we will use the binary cross-entropy cost function to optimise the model.
 
 But how do we calculate these partial derivatives? The equation for the mode’s prediction $\hat y$ is given by
 
@@ -189,20 +189,19 @@ Therefore, the gradient descent formula would simply be
 
 $$
 \begin{bmatrix}
-w_{1_{new}} \\
-w_{2_{new}} \\
-b_{_{new}} 
+w_{1_{\text{new}}} \\
+w_{2_{\text{new}}} \\
+b_{_{\text{new}}} \\
 \end{bmatrix} =
 \begin{bmatrix}
 w_{1} \\
 w_{2} \\
-b 
-\end{bmatrix} -
-\alpha
+b \\
+\end{bmatrix} - \alpha
 \begin{bmatrix}
 -(y-\hat y)x_1 \\
 -(y-\hat y)x_2 \\
--(y-\hat y) 
+-(y-\hat y) \\
 \end{bmatrix}
 $$
 
@@ -389,16 +388,16 @@ H_f =
 \end{bmatrix}
 $$
 
-That means the approximation to the minima of the function (root of the $f'(x,y)$) using Newton’s method is
+That means the approximation to the minima of the function (root of the $f'(x,y) $ ) using Newton’s method is
 
 $$
 \begin{bmatrix}
 x_1 \\
-y_1
+y_1 \\
 \end{bmatrix} =
 \begin{bmatrix}
 4 \\
-4
+4 \\
 \end{bmatrix} -
 \begin{bmatrix}
 198.4 & -2.6 \\
@@ -406,13 +405,12 @@ y_1
 \end{bmatrix}^{-1} \cdot
 \begin{bmatrix}
 277.6 \\
-213.6
+213.6 \\
 \end{bmatrix} = 
 \begin{bmatrix}
 2.58 \\
-2.62
+2.62 \\
 \end{bmatrix}
-
 $$
 
 ![Untitled](images/Untitled%2010.png)
