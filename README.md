@@ -23,6 +23,7 @@ My interests in ML span areas such as:
 
 ## Latest updates
 
+- 21/12/2023 - [Neural Networks](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Calculus/3.%20Neural%20Networks) [Calculus]
 - 20/12/2023 - [Gradient](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Calculus/2.%20Gradient) [Calculus]
 - 19/12/2023 - [Derivatives](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Calculus/1.%20Derivatives) [Calculus]
 - 17/12/2023 - [LoRA](https://github.com/JaydenTeoh/ML-research/tree/main/ML%20Papers%20Explained/Natural%20Language%20Processing/LoRA) [ML Paper]
