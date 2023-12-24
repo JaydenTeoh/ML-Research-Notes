@@ -151,7 +151,7 @@ $$
 P(HH|\text{1st is H}) = \frac{1}{2}
 $$
 
-In general, given two events $A$ and $B$, if the event of interest is $B$ and the event $A$ is known to have occurred, the "the conditional probability of $B$ given $A$" is written as $P(B|A)$.
+In general, given two events $A$ and $B$, if the event of interest is $B$ and the event $A$ is known to have occurred, the conditional probability of $B$ given $A$ is written as $P(B|A)$.
 
 This can also be understood as the fraction of probability $A$ that intersects with $B$
 
@@ -234,11 +234,12 @@ We want to find out
 
 $$
 \begin{align} \notag
-P(\text{sick} | \text{diagnosed sick}) &= \frac{P(\text{sick} \cap \text{diagnosed sick})}{P(\text{diagnosed sick})} \\ \notag
-&= \frac{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick})}{P(\text{diagnosed sick})} \\ \notag
-&= \frac{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick})}{P(\text{sick}\cap \text{diagnosed sick}) + P(\text{not sick}\cap \text{diagnosed sick})} \\ \notag
-&= \frac{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick})}{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick}) + P(\text{not sick}) \times P(\text{diagnosed sick}|\text{not sick})} \\ \notag
-&= \frac{0.0001 \times 0.99}{(0.0001 \times 0.99) + (0.9999 \times 0.01)} \\ \notag
+P(\text{sick} | \text{diagnosed sick}) 
+&= \frac{P(\text{sick} \cap \text{diagnosed sick})}{P(\text{diagnosed sick})}\\\ \notag
+&= \frac{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick})}{P(\text{diagnosed sick})}\\\ \notag
+&= \frac{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick})}{P(\text{sick}\cap \text{diagnosed sick}) + P(\text{not sick}\cap \text{diagnosed sick})}\\\ \notag
+&= \frac{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick})}{P(\text{sick}) \times P(\text{diagnosed sick}|\text{sick}) + P(\text{not sick}) \times P(\text{diagnosed sick}|\text{not sick})}\\\ \notag
+&= \frac{0.0001 \times 0.99}{(0.0001 \times 0.99) + (0.9999 \times 0.01)}\\\ \notag
 &= 0.0098
 \end{align}
 $$
@@ -274,8 +275,8 @@ Moreover, we know that the probability of observing features $x_1, x_2, \dots ,x
 
 $$
 \begin{align} \notag
-P(x_1,x_2,\dots,x_n) &= P(x_1,x_2,\dots,x_n|C_k) \times P(C_k) + P(x_1,x_2,\dots,x_n|C_k') \times (P(C_k') \\ \notag
-& = \sum_{i=1}^m P(x_1,x_2,\dots,x_n | C_i) \times P(C_i) \\ \notag
+P(x_1,x_2,\dots,x_n) &= P(x_1,x_2,\dots,x_n|C_k) \times P(C_k) + P(x_1,x_2,\dots,x_n|C_k') \times (P(C_k')\\\ \notag
+& = \sum_{i=1}^m P(x_1,x_2,\dots,x_n | C_i) \times P(C_i)\\\ \notag
 & = \sum_{i=1}^m P(x_1| C_i) \times P(x_2| C_i) \times \dots \times P(x_n| C_i)  \times P(C_i)
 \end{align}
 $$
@@ -283,7 +284,7 @@ $$
 As such, using Naive Bayes assumption, the original conditional probability can be expressed as following
 
 $$
-P(C_k|x_1,\dots,x_n) = \frac{P(x_1 |C_k) \times P(x_2|C_k) \times \dots \times P(x_n|C_k) \times P(C_k)}{\sum_{i=1}^m P(x_1| C_i) \times P(x_2| C_i) \times \dots \times P(x_n| C_i)  \times P(C_i)}
+P(C_k|x_1,\dots,x_n) = \frac{P(x_1 |C_k) \times P(x_2|C_k) \times \dots \times P(x_n|C_k) \times P(C_k)}{\sum_{i=1}^{m} P(x_1| C_i) \times P(x_2| C_i) \times \dots \times P(x_n| C_i)  \times P(C_i)}
 $$
 
 This seems complicated but let’s understand using an example. Suppose we have an email dataset containing spam and non-spam (ham) emails. We want to build a Naive Bayes classifier to predict the probability an email is spam based on the occurrence of two words: "lottery" and "winning.” → $P(\text{spam}| \text{lottery, winning})$
@@ -304,7 +305,7 @@ We want to calculate the following conditional probability
 
 $$
 \begin{align} \notag
-P(\text{spam}| \text{lottery, winning}) &= \frac{P(\text{lottery, winning} | \text{spam}) \times P(\text{spam})}{P(\text{lottery, winning})} \\ \notag
+P(\text{spam}| \text{lottery, winning}) &= \frac{P(\text{lottery, winning} | \text{spam}) \times P(\text{spam})}{P(\text{lottery, winning})}\\\ \notag
 &= \frac{P(\text{lottery, winning} | \text{spam}) \times P(\text{spam})}{P(\text{lottery, winning} | \text{spam}) \times P(\text{spam}) + P(\text{lottery, winning} | \text{ham}) \times P(\text{ham})}
 \end{align}
 $$
@@ -313,17 +314,17 @@ We aim to predict whether an email containing both “lottery” and “winning�
 
 $$
 \begin{align} \notag
-P(\text{spam}| \text{lottery, winning}) &= \frac{P(\text{lottery} | \text{spam}) \times P(\text{winning} | \text{spam}) \times P(\text{spam})}{P(\text{lottery} | \text{spam}) \times P(\text{winning} | \text{spam}) \times P(\text{spam}) + P(\text{lottery} | \text{ham}) \times P(\text{winning} | \text{ham}) \times P(\text{ham})} \\ \notag
-&= \frac{0.2 \times 0.7 \times 0.75}{(0.2 \times 0.7 \times 0.75) + (0.8 \times 0.125 \times 0.1)} \\ \notag
+P(\text{spam}| \text{lottery, winning}) &= \frac{P(\text{lottery} | \text{spam}) \times P(\text{winning} | \text{spam}) \times P(\text{spam})}{P(\text{lottery} | \text{spam}) \times P(\text{winning} | \text{spam}) \times P(\text{spam}) + P(\text{lottery} | \text{ham}) \times P(\text{winning} | \text{ham}) \times P(\text{ham})}\\\ \notag
+&= \frac{0.2 \times 0.7 \times 0.75}{(0.2 \times 0.7 \times 0.75) + (0.8 \times 0.125 \times 0.1)}\\\ \notag
 &= 0.913
 \end{align}
 $$
 
 ## Random Variables
 
-A **random variable**, usually written $X$, is a variable whose possible values are numerical outcomes of a random phenomenon. 
+A **random variable**, usually written $X$ , is a variable whose possible values are numerical outcomes of a random phenomenon. 
 
-The term 'random variable' can be misleading as its mathematical definition is not actually random nor a variable, but rather it is a function from possible outcomes (e.g., the possible upper sides of a flipped coin such as heads $H$and tails $T$) in a sample space (e.g., the set $\set{H,T}$) to a measurable space (e.g., $\set{0,1}$) in which 1 is corresponding to $H$ and 0 is corresponding to $T$, respectively), often to the real numbers.
+The term 'random variable' can be misleading as its mathematical definition is not actually random nor a variable, but rather it is a function from possible outcomes (e.g., the possible upper sides of a flipped coin such as heads $H$ and tails $T$) in a sample space (e.g., the set $\set{H,T}$) to a measurable space (e.g., $\set{0,1}$) in which 1 is corresponding to $H$ and 0 is corresponding to $T$, respectively), often to the real numbers.
 
 There are two types of random variables, **discrete** and **continuous**.
 
@@ -343,16 +344,16 @@ Formally, a continuous random variable is a random variable whose cumulative di
 
 The **probability distribution** of a discrete random variable is a list of probabilities associated with each of its possible values. A **probability mass function** (PMF) is a function that gives the probability that a discrete random variable is exactly equal to some value. The probabilities in the probability distribution of a random variable $X$ must satisfy the following two conditions:
 
-- Each probability $P(X = x)$ must be between 0 and 1:
+- Each probability $P(x)$ must be between 0 and 1:
     
     $$
-    0 \leq P(X =x) \leq 1
+    0 \leq P(x) \leq 1
     $$
     
 - The sum of all the possible probabilities is :
     
     $$
-    \sum P(X=x) = 1
+    \sum P(x) = 1
     $$
     
 
@@ -374,7 +375,7 @@ $$
 P(k:n,p)={\binom {n}{k}}p^{k}(1-p)^{n-k}
 $$
 
-The binomial coefficient ${\binom {n}{k}}$ is the number of ways of picking $k$ **unordered** successes from $n$ trials (e.g. number of possible combinations of getting 4 $H$ from 10 coin flips). It is often denoted as $^{n}C_k$ or “$n$ choose $k$”. This coefficient can be computed using the following formula
+The binomial coefficient ${\binom {n}{k}}$ is the number of ways of picking $k$ **unordered** successes from $n$ trials (e.g. number of possible combinations of getting 4 $H$ from 10 coin flips). It is often denoted as $^{n}C_k$ or “n choose k”. This coefficient can be computed using the following formula
 
 $$
 {\binom {n}{k}} = \frac{n !}{k!(n-k)!}
@@ -433,7 +434,7 @@ $$
 Every CDF $F_X$ is **non-decreasing** and **right-continuous**. Furthermore,
 
 $$
-\lim _{x\to -\infty }F_{X}(x)=0,\quad \lim _{x\to +\infty }F_{X}(x)=1
+\lim _{x\to -\infty}F_{X}(x) = 0, \quad \lim _{x\to +\infty}F_{X}(x) = 1
 $$
 
 ### Uniform Distribution
@@ -445,7 +446,11 @@ A continuous random variable can be modelled with a uniform distribution if all 
 The probability density function of the continuous uniform distribution is:
 
 $$
-f(x)={\begin{cases}{\frac {1}{b-a}}&{\text{for }}a\leq x\leq b,\\[8pt]0&{\text{for }}x<a\ {\text{ or }}\ x>b.\end{cases}}
+f(x)=
+\begin{cases}
+{\frac {1}{b-a}} & {\text{for }}a\leq x\leq b,\\
+0 & {\text{for }}x<a \space {\text{ or }} \space x>b.
+\end{cases}
 $$
 
 ### Normal Distribution (Gaussian Distribution)
