@@ -420,9 +420,9 @@ Equivalently, the correlation matrix can be seen as the covariance matrix of the
 $$
 corr(X) =
 \begin{bmatrix}
-1 & {\frac{{E}[(X_{1}-\mu_{1})(X_{2}-\mu_{2})]}{\sigma (X_{1})\sigma (X_{2})}} & \cdots & {\frac{{E} [(X_{1} - \mu_{1})(X_{n}-\mu _{n})]}{\sigma (X_{1})\sigma (X_{n})}}\\\\
-{\frac{{E}[(X_{2}-\mu_{2})(X_{1}-\mu_{1})]}{\sigma (X_{2})\sigma (X_{1})}} & 1 & \cdots & {\frac{{E} [(X_{2} - \mu_{2})(X_{n} - \mu _{n})]}{\sigma (X_{2})\sigma (X_{n})}}\\\\
+1 & {\frac{E[(X_{1}-\mu_{1})(X_{2}-\mu_{2})]}{\sigma (X_{1})\sigma (X_{2})}} & \cdots & {\frac{E[(X_{1} - \mu_{1})(X_{n}-\mu_{n})]}{\sigma (X_{1})\sigma (X_{n})}}\\\\
+{\frac{E[(X_{2}-\mu_{2})(X_{1}-\mu_{1})]}{\sigma (X_{2})\sigma (X_{1})}} & 1 & \cdots & {\frac{E[(X_{2} - \mu_{2})(X_{n} - \mu_{n})]}{\sigma (X_{2})\sigma (X_{n})}}\\\\
 \vdots & \vdots & \ddots & \vdots\\\\
-{\frac{{E}[(X_{n}-\mu_{n})(X_{1}-\mu _{1})]}{\sigma (X_{n})\sigma (X_{1})}} & {\frac {{E}[(X_{n} - \mu_{n})(X_{2} - \mu_{2})]}{\sigma (X_{n})\sigma (X_{2})}} & \cdots & 1
+{\frac{E[(X_{n}-\mu_{n})(X_{1}-\mu_{1})]}{\sigma (X_{n})\sigma (X_{1})}} & {\frac{E[(X_{n} - \mu_{n})(X_{2} - \mu_{2})]}{\sigma (X_{n})\sigma (X_{2})}} & \cdots & 1
 \end{bmatrix}
 $$
