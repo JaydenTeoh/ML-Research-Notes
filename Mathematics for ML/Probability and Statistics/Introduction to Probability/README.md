@@ -151,7 +151,7 @@ $$
 P(HH|\text{1st is H}) = \frac{1}{2}
 $$
 
-In general, given two events $A$ and $B$, if the event of interest is $B$ and the event $A$ is known to have occurred, the conditional probability of $B$ given $A$ is written as $P(B|A)$.
+In general, given two events $A$ and $B$, if the event of interest is $B$ and the event $A$ is known to have occurred, the conditional probability of $ B$ given $ A$ is written as $P(B|A)$.
 
 This can also be understood as the fraction of probability $A$ that intersects with $B$
 
@@ -322,7 +322,7 @@ $$
 
 ## Random Variables
 
-A **random variable**, usually written $X$, is a variable whose possible values are numerical outcomes of a random phenomenon. 
+A **random variable**, usually written $ X$, is a variable whose possible values are numerical outcomes of a random phenomenon. 
 
 The term 'random variable' can be misleading as its mathematical definition is not actually random nor a variable, but rather it is a function from possible outcomes (e.g., the possible upper sides of a flipped coin such as heads $H$ and tails $T$) in a sample space (e.g., the set $\set{H,T}$) to a measurable space (e.g., $\set{0,1}$) in which 1 is corresponding to $H$ and 0 is corresponding to $T$, respectively), often to the real numbers.
 
@@ -344,7 +344,7 @@ Formally, a continuous random variable is a random variable whose cumulative di
 
 The **probability distribution** of a discrete random variable is a list of probabilities associated with each of its possible values. A **probability mass function** (PMF) is a function that gives the probability that a discrete random variable is exactly equal to some value. The probabilities in the probability distribution of a random variable $X$ must satisfy the following two conditions:
 
-- Each probability $ P(x)$ must be between 0 and 1:
+- Each probability $P(x)$ must be between 0 and 1:
     
 $$
 0 \leq P(x) \leq 1
