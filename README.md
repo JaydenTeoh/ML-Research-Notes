@@ -10,7 +10,7 @@ View notes on Notion [here](https://jaydenmachinelearning.notion.site/)
 
 Hi, I am a undergraduate actively engaged in AI research! \
 I have a keen interest in the mathematical concepts behind machine learning and staying up-to-date with the ML landscape by regularly reading ML papers. \
-As someone relatively new to ML, I often encounter complex theories or technicalities that can be overwhelming. That's why I've chosen to share my notes here as I hope they can serve as a helpful resource for fellow beginners in the field of ML, just like me.
+As someone relatively new to ML, I often encounter complex theories or technicalities that can be overwhelming. I hope my notes can serve as a helpful resource for fellow beginners in the field of ML, just like me.
 
 ## My Interests
 
