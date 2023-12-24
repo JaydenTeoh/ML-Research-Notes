@@ -23,6 +23,8 @@ My interests in ML span areas such as:
 
 ## Latest updates
 
+- 25/12/2023 - [Probability Distributions](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Probability%20and%20Statistics/2.%20Probability%20Distributions) [Probability and Statistics]
+- 24/12/2023 - [Introduction to Probability](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Probability%20and%20Statistics/1.%20Introduction%20to%20Probability) [Probability and Statistics]
 - 21/12/2023 - [Neural Networks](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Calculus/3.%20Neural%20Networks) [Calculus]
 - 20/12/2023 - [Gradient](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Calculus/2.%20Gradient) [Calculus]
 - 19/12/2023 - [Derivatives](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Calculus/1.%20Derivatives) [Calculus]
