@@ -143,7 +143,7 @@ We can see that the variance has now be scaled to 1.
 
 Skewness and kurtosis are statistical measures that provide insights into the shape, symmetry, and distribution of a dataset beyond what is conveyed by mean, variance, or standard deviation.
 
-The $n$-th moment of a random variable is the expected value of its $n$-th power → $E[X^n]$
+The n-th moment of a random variable is the expected value of its n-th power → $E[X^n]$
 
 Skewness
 
@@ -358,7 +358,7 @@ $$
 Covariance Formula For Joint Probability:
 
 $$
-{Cov} (X,Y)=\sum _{i=1}^{n}\sum _{j=1}^{n}(x_{i}-E[X])(y_{j}-E[Y])\cdot P(X = x_i, Y = y_j)
+{Cov}(X,Y)=\sum_{i=1}^{n}\sum_{j=1}^{n}(x_{i}-E[X])(y_{j}-E[Y])\cdot P(X = x_i, Y = y_j)
 $$
 
 Covariance Formula in terms of Expected Values:
@@ -399,7 +399,7 @@ A **covariance matrix** is a square matrix that summarizes the variances and cov
 For a dataset with $n$ variables, the covariance matrix is an $n \times n$ matrix. It looks like the following
 
 $$
-\operatorname {cov} (X) =\begin{bmatrix}
+{cov}(X) =\begin{bmatrix}
 var(x_1) & cov(x_1, x_2) & \cdots & cov(x_1,x_n)\\\\
 cov(x_2,x_1) & var(x_2) & \cdots & cov(x_2, x_n)\\\\
 \vdots & \vdots & \ddots & \vdots\\\\
@@ -418,10 +418,10 @@ $$
 Equivalently, the correlation matrix can be seen as the covariance matrix of the standardized random variables
 
 $$
-\operatorname {corr} (X) =\begin{bmatrix}
-1 & {\frac{\operatorname{E} [(X_{1}-\mu_{1})(X_{2}-\mu_{2})]}{\sigma (X_{1})\sigma (X_{2})}} & \cdots & {\frac{\operatorname{E} [(X_{1} - \mu_{1})(X_{n}-\mu _{n})]}{\sigma (X_{1})\sigma (X_{n})}}\\\\
-{\frac{\operatorname{E} [(X_{2}-\mu_{2})(X_{1}-\mu_{1})]}{\sigma (X_{2})\sigma (X_{1})}} & 1 & \cdots & {\frac{\operatorname{E} [(X_{2} - \mu_{2})(X_{n} - \mu _{n})]}{\sigma (X_{2})\sigma (X_{n})}}\\\\
+{corr}(X) =\begin{bmatrix}
+1 & {\frac{{E}[(X_{1}-\mu_{1})(X_{2}-\mu_{2})]}{\sigma (X_{1})\sigma (X_{2})}} & \cdots & {\frac{{E} [(X_{1} - \mu_{1})(X_{n}-\mu _{n})]}{\sigma (X_{1})\sigma (X_{n})}}\\\\
+{\frac{{E}[(X_{2}-\mu_{2})(X_{1}-\mu_{1})]}{\sigma (X_{2})\sigma (X_{1})}} & 1 & \cdots & {\frac{{E} [(X_{2} - \mu_{2})(X_{n} - \mu _{n})]}{\sigma (X_{2})\sigma (X_{n})}}\\\\
 \vdots & \vdots & \ddots & \vdots\\\\
-{\frac{\operatorname {E} [(X_{n}-\mu_{n})(X_{1}-\mu _{1})]}{\sigma (X_{n})\sigma (X_{1})}} & {\frac {\operatorname{E} [(X_{n} - \mu_{n})(X_{2} - \mu_{2})]}{\sigma (X_{n})\sigma (X_{2})}} & \cdots & 1
+{\frac{{E}[(X_{n}-\mu_{n})(X_{1}-\mu _{1})]}{\sigma (X_{n})\sigma (X_{1})}} & {\frac {{E}[(X_{n} - \mu_{n})(X_{2} - \mu_{2})]}{\sigma (X_{n})\sigma (X_{2})}} & \cdots & 1
 \end{bmatrix}
 $$
