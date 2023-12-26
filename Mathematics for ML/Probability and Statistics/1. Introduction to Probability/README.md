@@ -405,7 +405,7 @@ $$
 
 A **continuous random variable** is not defined at specific values. Instead, it is defined over an interval of values. The probability of observing any single value is equal to 0, since the number of values which may be assumed by the random variable is infinite.
 
-Probability Density Functions
+<ins>Probability Density Functions</ins>
 
 ![Untitled](images/Untitled%2018.png)
 
@@ -415,7 +415,7 @@ A probability mass function differs from a **probability density function** (P
 
 The Cumulative Distribution Functions of a random variable $X$ shows how probability the variable has accumulated until a certain value
 
-CDF for Discrete Probability Distributions
+<ins>CDF for Discrete Probability Distributions</ins>
 
 ![Untitled](images/Untitled%2019.png)
 
@@ -487,7 +487,7 @@ $$
 
 where $\sigma^2$ is the variance.
 
-Empirical Rule
+<ins>Empirical Rule</ins>
 
 The empirical rule, or 68-95-99.7 rule, tells you where most of your values lie in a normal distribution
 
@@ -495,7 +495,7 @@ The empirical rule, or 68-95-99.7 rule, tells you where most of your values lie 
 - Around 95% of values are within 2 standard deviations from the mean.
 - Around 99.7% of values are within 3 standard deviations from the mean.
 
-Standardisation
+<ins>Standardisation</ins>
 
 We can convert any normal distribution to the **standard normal distribution**, where $\mu =0$ and $\sigma = 1$. This is done by transforming each value $x \in X$ into its corresponding standardized $z$ value using the following formula
 

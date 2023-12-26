@@ -12,7 +12,7 @@
 
 Expected value uses probability to tell us what outcomes to expect in the long run. It represents the average outcome or the long-term average that can be anticipated from a probability distribution. Informally, the expected value is the arithmetic mean of the possible values a random variable can take, weighted by the probability of those outcomes. The expected value of a random variable $X$ is denoted by $E[X]$.
 
-For discrete distributions 
+<ins>For discrete distributions</ins>
 
 $$
 E[X] = \sum_{i=1}^{N}x_i \cdot P(x_i)
@@ -24,7 +24,7 @@ $$
 E[X] = 10 \times \frac{1}{2} + 0 \times \frac{1}{2} = 5
 $$
 
-For continuous distributions 
+<ins>For continuous distributions</ins>
 
 Now consider a random variable *X* which has a probability density function given by a function *f* on the real number line. This means that the probability of *X* taking on a value in any given open interval is given by the integral of *f* over that interval. The expectation of *X* is then given by the integral
 
@@ -34,7 +34,7 @@ $$
 
 where $f(x)$ is the PDF.
 
-For uniform distributions
+<ins>For uniform distributions</ins>
 
 The expected value for a uniform distribution in the range $[a,b]$ is given by
 
@@ -42,7 +42,7 @@ $$
 E[X] = \frac{a+b}{2}
 $$
 
-Sum of expectations
+<ins>Sum of expectations</ins>
 
 For two random variables $X$ and $Y$,
 
@@ -75,7 +75,7 @@ $$
 \sigma = \sqrt{Var(X)} = \sqrt{E[X^2] - E[X]^2}
 $$
 
-Empirical Rule
+<ins>Empirical Rule</ins>
 
 The empirical rule, or 68-95-99.7 rule, tells you where most of your values lie in a normal distribution
 
@@ -145,7 +145,7 @@ Skewness and kurtosis are statistical measures that provide insights into the sh
 
 The n-th moment of a random variable is the expected value of its n-th power → $E[X^n]$
 
-Skewness
+<ins>Skewness</ins>
 
 ![Untitled](images/Untitled%205.png)
 
@@ -161,7 +161,7 @@ $$
 - **Symmetric (No Skewness):** If the skewness value is around zero, the distribution is relatively symmetric around the mean, resembling a normal distribution.
 - **Skewed to the Left (Negative Skewness):** A skewness value less than zero signifies a heavier left tail, meaning that extreme negative values occur more frequently compared to a normal distribution.
 
-Kurtosis
+<ins>Kurtosis</ins>
 
 ![Untitled](images/Untitled%207.png)
 
@@ -284,11 +284,11 @@ $$
 P_{XY}(x,y) = P(X=x, Y=y)
 $$
 
-Discrete
+<ins>Discrete</ins>
 
 ![Untitled](images/Untitled%2018.png)
 
-Continuous
+<ins>Continuous</ins>
 
 ![Untitled](images/Untitled%2019.png)
 
@@ -386,13 +386,13 @@ $$
 - Negative covariance (e.g., Age vs. Naps per day): One variable increases while the other decreases.
 - Near-zero covariance (e.g., Age vs. Grades): Suggests little to no linear relationship.
 
-Covariance of Probability Distributions
+<ins>Covariance of Probability Distributions</ins>
 
 ![Untitled](images/Untitled%2030.png)
 
 Same mean and variance, but different covariances
 
-Covariance Matrix
+<ins>Covariance Matrix</ins>
 
 A **covariance matrix** is a square matrix that summarizes the variances and covariances of multiple variables in a dataset. It provides a systematic arrangement of variances along the diagonal and covariances off the diagonal. 
 

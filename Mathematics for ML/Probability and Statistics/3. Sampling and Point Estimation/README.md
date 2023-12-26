@@ -21,7 +21,7 @@ The **law of large numbers** is a mathematical theorem that states that the�
 
 ### Sample Proportion
 
-A **population proportion**, generally denoted by $P$, is a parameter that describes a percentage value associated with a population (for e.g. percentage of vehicles which are motorcycles). A population proportion is usually estimated through an unbiased sample statistic obtained from an observational study or experiment. This is known as the **sample proportion,** denoted by $**\hat{p}**$.
+A **population proportion**, generally denoted by $P$, is a parameter that describes a percentage value associated with a population (for e.g. percentage of vehicles which are motorcycles). A population proportion is usually estimated through an unbiased sample statistic obtained from an observational study or experiment. This is known as the **sample proportion,** denoted by $\hat{p}$.
 
 $$
 \hat{p} = \frac{x}{n}
@@ -294,9 +294,9 @@ In the previous example, you are actually trying to estimate the probability of 
 
 Let's introduce some notation. We will use $\Theta$ to represent any parameters we want to estimate
 
-- If the samples come from a population with a Bernoulli$(p)$ distribution, then $\Theta = p = P(Success)$
-- If the samples come from a population with a Gaussian$(\mu, \sigma)$ distribution, then $\Theta = (\mu,\sigma)$
-- If the samples come from a population with a Uniform$(0,b)$ distribution, then $\Theta = b$
+- If the samples come from a population with a Bernoulli $(p)$ distribution, then $\Theta = p = P(Success)$
+- If the samples come from a population with a Gaussian $(\mu, \sigma)$ distribution, then $\Theta = (\mu,\sigma)$
+- If the samples come from a population with a Uniform $(0,b)$ distribution, then $\Theta = b$
 
 There are five components in Bayesian statistics:
 
@@ -311,7 +311,7 @@ There are five components in Bayesian statistics:
 Sometimes you still want a point estimate for the parameter $\Theta$. You can use the posterior distribution to define different point estimates. One of the most commonly used point estimates in Bayesian statistics is known as Maximum a Posteriori (MAP). As the name suggests, it the the value $\theta$ that maximizes the posterior distribution of the parameter. If $\Theta$ is a continuous random variable, this can be expressed as
 
 $$
-\hat\theta = \argmax_\theta f_{\Theta|X=x}
+\hat\theta = \argmax\limits_{\theta} f_{\Theta|X=x}
 $$
 
 Note that the MAP is nothing more than the **posterior mode.**
@@ -339,7 +339,7 @@ This estimate actually minimizes the $L_1$ error.
 It turns out the MAP estimation and the MLE have a lot in common. Begin by noting that the conditional distribution of the data has the same expression as the likelihood:
 
 $$
-p_{X|\Theta=\theta}(x) = \prod_{i=1}^n p_{X_i|\Theta=\theta (x_i)} \hspace{1cm} L(\theta;x) = \prod_{i=1}^np_{X_i}(x_i)
+p_{X|\Theta=\theta}(x) = \prod_{i=1}^n p_{X_i|\Theta=\theta (x_i)}, \space L(\theta;x) = \prod_{i=1}^np_{X_i}(x_i)
 $$
 
 The interpretations are slightly different, because one comes from a conditional distribution and the other does not.. However, the expressions are exactly the same.
