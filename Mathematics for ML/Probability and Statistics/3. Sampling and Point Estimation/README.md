@@ -311,7 +311,7 @@ There are five components in Bayesian statistics:
 Sometimes you still want a point estimate for the parameter $\Theta$. You can use the posterior distribution to define different point estimates. One of the most commonly used point estimates in Bayesian statistics is known as Maximum a Posteriori (MAP). As the name suggests, it the the value $\theta$ that maximizes the posterior distribution of the parameter. If $\Theta$ is a continuous random variable, this can be expressed as
 
 $$
-\hat\theta = \argmax\limits_{\theta} f_{\Theta|X=x}
+\hat\theta = \underset{\theta}{argmax} f_{\Theta|X=x}
 $$
 
 Note that the MAP is nothing more than the **posterior mode.**
