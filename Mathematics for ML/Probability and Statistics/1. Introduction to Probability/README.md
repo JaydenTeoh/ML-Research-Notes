@@ -502,5 +502,3 @@ We can convert any normal distribution to the **standard normal distribution**, 
 $$
 z = \frac{x - \mu}{\sigma}
 $$
-
-Chi-Squared Distribution
