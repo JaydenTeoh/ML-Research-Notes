@@ -89,13 +89,13 @@ The **confidence level** (e.g., 95% confidence) represents the long-term success
 
 ### Confidence Interval for Proportion
 
-We calculated confidence intervals for means based on sample data. Now, let's consider scenarios where we want to estimate proportions rather than means. When dealing with proportions, we're interested in estimating the proportion of a certain characteristic within a population based on sample data. Similar to confidence intervals for population means, a confidence interval for a population proportion is constructed by calculating the sample proportion $\hat{p} $ , and then adding and subtracting the margin of error from $\hat{p}$ to get the limits of the confidence interval.
+We calculated confidence intervals for means based on sample data. Now, let's consider scenarios where we want to estimate proportions rather than means. When dealing with proportions, we're interested in estimating the proportion of a certain characteristic within a population based on sample data. Similar to confidence intervals for population means, a confidence interval for a population proportion is constructed by calculating the sample proportion $\hat{p}$ , and then adding and subtracting the margin of error from $\hat{p}$ to get the limits of the confidence interval.
 
 $$
 CI = \hat{p} \pm MOE_{\gamma}
 $$
 
-The margin of error for a confidence interval with confidence level $\gamma$ for an unknown population proportion $p$ is
+The margin of error for a confidence interval with confidence level $\gamma$ for an unknown population proportion <i>p</i> is
 
 $$
 MOE_{\gamma} = z_{\gamma} \times\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
