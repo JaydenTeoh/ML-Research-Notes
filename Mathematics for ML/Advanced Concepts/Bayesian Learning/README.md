@@ -26,7 +26,7 @@ where each $p$ is a density function and $p_Y(y) > 0$.
 
 ### Linear Regression
 
-The linear regression model assumes that the relationship between the dependent variable $y$ and the regressors $x$ is linear. Given a sample of $n$ paired observations, i.e. $(x_1, y_1), (x_2, y_2),\dots , (x_n, y_n)$ and each input $x_i \in \R^{1\times d}$ is a vector with $d$ features, the relationship between $y$ and $x$ is expressed as such:
+The linear regression model assumes that the relationship between the dependent variable $y$ and the regressors $x$ is linear. Given a sample of $n$ paired observations, i.e. $(x_1, y_1), (x_2, y_2),\dots , (x_n, y_n)$ and each input $x_i \in \mathbb{R}^{1\times d}$ is a vector with $d$ features, the relationship between $y$ and $x$ is expressed as such:
 
 $$
 y_i  = \beta_0 + \beta_1 x_{i1} + \beta_2x_{i2} +\dots +\beta_dx_{id} + \epsilon_i, \qquad i = 1, \dots, n
@@ -59,7 +59,7 @@ In the Bayesian approach, we treat regression coefficients and variance as rando
 We want to calculate the probability of our model’s parameter $\theta$ given the input $X$ and response $Y$. We formulate our Bayes’ theorem formula as:
 
 $$
-\underbrace{p(\theta|X,Y)}_{\text{posterior}} = \frac{\overbrace{p(Y|X,\theta)}^{\text{likelihood}}\overbrace{p(\theta)}^{\text{prior}}}{\underbrace{p(Y|X)}_{\text{marginal likelihood}}}
+\underbrace{p(\theta|X,Y)}_{\text{posterior}} = \frac{{\overbrace{p(Y|X,\theta)}^{\text{likelihood}}}{\overbrace{p(\theta)}^{\text{prior}}}}{{\underbrace{p(Y|X)}_{\text{marginal likelihood}}}}
 $$
 
 Due to the integration over the parameter space, the marginal likelihood does not depend upon the parameters, which means we can treat it as simply the normalizing constant that ensures the posterior is well-defined. Therefore,
