@@ -59,7 +59,7 @@ In the Bayesian approach, we treat regression coefficients and variance as rando
 We want to calculate the probability of our model’s parameter $\theta$ given the input $X$ and response $Y$. We formulate our Bayes’ theorem formula as:
 
 $$
-\underbrace{p(\theta|X,Y)}_{\text{posterior}} = \frac{\overbrace{p(Y|X,\theta)}^{\text{likelihood}}\overbrace{p(\theta)}^{\text{prior}}}{\underbrace{p(Y|X)}_{\text{marginal likelihood}}} 
+\underbrace{p(\theta|X,Y)}_{\text{posterior}} = \frac{\overbrace{p(Y|X,\theta)}^{\text{likelihood}}\overbrace{p(\theta)}^{\text{prior}}}{\underbrace{p(Y|X)}_{\text{marginal likelihood}}}
 $$
 
 Due to the integration over the parameter space, the marginal likelihood does not depend upon the parameters, which means we can treat it as simply the normalizing constant that ensures the posterior is well-defined. Therefore,
@@ -159,41 +159,41 @@ Here are some of the conjugate distributions
 
 ### Posterior Predictions
 
-In practice, we are usually not so much interested in $\theta$ themselves. Rather, our focus is on the predictions we make with those parameter values. Now that we have derived the posterior, which represents our updated beliefs about the model, we can use it to compute the predictive distribution of $y*$, at a test input $x*$.
+In practice, we are usually not so much interested in $\theta$ themselves. Rather, our focus is on the predictions we make with those parameter values. Now that we have derived the posterior, which represents our updated beliefs about the model, we can use it to compute the predictive distribution of $y'$, at a test input $x'$.
 
-In a Bayesian setting, we take the parameter distribution and average over all plausible parameter settings when we make predictions. More specifically, to make predictions at $x*$, we integrate out $\theta$ and obtain
+In a Bayesian setting, we take the parameter distribution and average over all plausible parameter settings when we make predictions. More specifically, to make predictions at $x'$, we integrate out $\theta$ and obtain
 
 $$
 \begin{align} \notag
-p(y_*| X, Y, x_*) &= \int p(y_*|x_*, \theta)p(\theta|X,Y)d\theta\\\ \notag
-&= \int \mathcal{N}(y_*|x_*^T\theta, \sigma^2) \mathcal{N}(\theta|m_N, S_N)d\theta\\\
-&= \mathcal{N}(y_*|x_*^Tm_N, \sigma^2 + x_*^TS_Nx_*) \tag{3}
+p(y'| X, Y, x') &= \int p(y'|x', \theta)p(\theta|X,Y)d\theta\\\ \notag
+&= \int \mathcal{N}(y'|x'^T\theta, \sigma^2) \mathcal{N}(\theta|m_N, S_N)d\theta\\\
+&= \mathcal{N}(y'|x'^Tm_N, \sigma^2 + x'^TS_Nx') \tag{3}
 \end{align}
 $$
 
-which we can interpret as the average prediction of $y_*|x_*, \theta$ for all plausible parameters $\theta$ according to the posterior distribution $p(\theta |X, Y)$
+which we can interpret as the average prediction of $y'|x', \theta$ for all plausible parameters $\theta$ according to the posterior distribution $p(\theta |X, Y)$
 
 Note that the expression in (3) is a normal PDF as a result of the convolution of two Gaussians. I did not show the proof for it as that is not the focus of today. However, I’ll definitely talk more about it in future content. 
 
-The predictive mean $x_*^Tm_N$ is the point on the linear regression hyperplane. The term $x_*^TS_Nx_*$ reflects the posterior uncertainty associated with the parameters $\theta$. This is a crucial point because the Bayesian framework is able to incorporate our uncertainty about $\theta$ upon observing the training data $X, Y$. 
+The predictive mean $x'^Tm_N$ is the point on the linear regression hyperplane. The term $x'^TS_Nx'$ reflects the posterior uncertainty associated with the parameters $\theta$. This is a crucial point because the Bayesian framework is able to incorporate our uncertainty about $\theta$ upon observing the training data $X, Y$. 
 
 ### Frequentist vs Bayesian
 
 Let’s take a look at how the Bayesian prediction differs from the Frequentist MLE predictor:
 
 $$
-p(y_*| X, Y, x_*) = \mathcal{N}(y_*|x_*^T\theta_{MLE}, \sigma^2)
+p(y'| X, Y, x') = \mathcal{N}(y'|x'^T\theta_{MLE}, \sigma^2)
 $$
 
-Notice the difference? Unlike (3), the likelihood function in MLE has fixed variance $\sigma^2$ regardless of the new input $x_*$. If we were to plot the graph of prediction $y_*$ against input $x_*$ for MLE and Bayesian linear regression side by side, the difference becomes clearer.
+Notice the difference? Unlike (3), the likelihood function in MLE has fixed variance $\sigma^2$ regardless of the new input $x'$. If we were to plot the graph of prediction $y'$ against input $x'$ for MLE and Bayesian linear regression side by side, the difference becomes clearer.
 
 ![Untitled](images/Untitled%201.png)
 
-The blue bars represents the distribution of $y_*$ at each $x_*$. The red circles represent the training data $X,Y$ we have observed. Note that we have yet to observe any data towards the extremes of the graphs.
+The blue bars represents the distribution of $y'$ at each $x'$. The red circles represent the training data $X,Y$ we have observed. Note that we have yet to observe any data towards the extremes of the graphs.
 
-In MLE, the variance of $y_*$ is constant throughout. That means that even though we have yet to observe any training data at the extremes of the graph, we are equally confident in our prediction about those points. 
+In MLE, the variance of $y'$ is constant throughout. That means that even though we have yet to observe any training data at the extremes of the graph, we are equally confident in our prediction about those points. 
 
-However, for the Bayesian linear regression model, the predictive uncertainty takes into account the location of $x_*$ and the uncertainty of $\theta$ at different points. As such, at points where not much data is observed, the Bayesian framework displays high predictive variance. 
+However, for the Bayesian linear regression model, the predictive uncertainty takes into account the location of $x'$ and the uncertainty of $\theta$ at different points. As such, at points where not much data is observed, the Bayesian framework displays high predictive variance. 
 
 This is the key advantage of the Bayesian framework over the Frequentist MLE. It makes sense that we should be not confident about inputs we have lack information about, and it is even more important to incorporate this uncertainty in decision-making systems where bad decisions can have significant consequences (e.g., in reinforcement learning or robotics).
 
@@ -257,8 +257,8 @@ Convert the above to negative log-likelihood and discard the terms independent o
 
 $$
 \begin{align} \notag
-\theta_{MAP} &= \underset{\theta}{\argmin} \space (Y-X\theta)^2 + \frac{1}{\tau}|\theta|\\\ \notag
-&= \underset{\theta}{\argmin} \space (||Y-X\theta||_2^2 + \lambda||\theta||_1)
+\theta_{MAP} &= \underset{\theta}{argmin} \space (Y-X\theta)^2 + \frac{1}{\tau}|\theta|\\\ \notag
+&= \underset{\theta}{argmin} \space (||Y-X\theta||_2^2 + \lambda||\theta||_1)
 \end{align}
 $$
 
