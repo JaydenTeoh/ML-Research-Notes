@@ -6,7 +6,7 @@ Before we dive into Bayesian learning, it would probably be good to recap on Bay
 
 ### Bayes’ Theorem
 
-Events
+<ins>Events</ins>
 
 Suppose events $B_1, B_2, \dots, B_m$ partition the sample space (that is, they are mutually exclusive and collectively exhaustive), then using the law of total probability, for each $B_k$ and any event $A$ with $P(A) > 0$
 
@@ -14,7 +14,7 @@ $$
 P(B_k|A) = \frac{P(A|B_K)P(B_K)}{P(A)}= \frac{P(A|B_k) P(B_k)}{\sum_{i=1}^m P(A| B_i)  P(B_i)}
 $$
 
-Random Variables
+<ins>Random Variables</ins>
 
 Using the same assumption as in the law of total probability, given continuous random variables $X$ and $Y$, Bayes’ Theorem is given by
 
@@ -201,7 +201,7 @@ This is the key advantage of the Bayesian framework over the Frequentist MLE. It
 
 Even though the Bayesian framework formulates linear regression differently from MLE, I would like to show that it is flexible enough to recover it.
 
-Ridge Regression
+<ins>Ridge Regression</ins>
 
 Consider the special case where we have a spherical Gaussian prior with mean $m_0 = 0$ and covariance $S_0 = \tau_0^2I$ , i.e. $p(\theta) \sim \mathcal{N}(0, \tau_0^2I)$, where $\tau_0$ is some constant. Then the posterior mean reduces to
 
@@ -231,7 +231,7 @@ $$
 
 which is exactly the same as the loss function for Ordinary Least Squares (OLS). If we were to take the MAP (Maximum A Posteriori) estimator of the posterior (using argmin because we want to minimise negative log-posterior), we get the same estimate as MLE.
 
-Lasso Regression
+<ins>Lasso Regression</ins>
 
 Let’s consider a different distribution for the prior, like a Laplace distribution, $Laplace(0,\tau)$, instead
 
