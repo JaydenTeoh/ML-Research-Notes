@@ -123,17 +123,17 @@ So we’ve seen a few reasoning patterns and we derived the intuition that proba
 
 ![Untitled](images/Untitled%205.png)
 
-There are three possible structures in a Bayesian network. Let’s observe in which of these three structures can $X$ influence $Y$ (green represents valid probabilistic influence and red represents invalid).
+There are three possible structures in a Bayesian network. Let’s observe in which of these three structures can $X$ influence $Y$ ($\color{green}{\textbf{green}}$ represents valid probabilistic influence and $\color{red}{\textbf{red}}$ represents invalid).
 
-1. *Cascade (e.g. a & b)*: From causal reasoning, we know that a parent can directly influence its child node, which means influence can propagate down to any descendant node, which means $X$ can influence $Y$ in (a). Similarly, from the evidential standpoint, probabilistic influence can occur in the reverse direction, which means $X$ can influence $Y$ in (b). We’ll see that probabilistic influence is symmetry in general.
-2. *Common parent (e.g. c)*:  If we observe the value of $X$, it would influence the parent, $Z$, by evidential reasoning which would in turn influence $Y$. This means that $X$ can influence $Y$ when they are connected by a common parent
-3. *V-structure (e.g. d)*: In the case where $X$ and $Y$ are causes with a joint effect, we call it a v-structure. In this structure, $X$ cannot influence $Y$.
+1. $\color{green}{\textbf{Cascade (e.g. a and b)}}$: From causal reasoning, we know that a parent can directly influence its child node, which means influence can propagate down to any descendant node, which means $X$ can influence $Y$ in (a). Similarly, from the evidential standpoint, probabilistic influence can occur in the reverse direction, which means $X$ can influence $Y$ in (b). We’ll see that probabilistic influence is symmetry in general.
+2. $\color{green}{\textbf{Common parent (e.g. c)}}$:  If we observe the value of $X$, it would influence the parent, $Z$, by evidential reasoning which would in turn influence $Y$. This means that $X$ can influence $Y$ when they are connected by a common parent
+3. $\color{red}{\textbf{V-structure (e.g. d)}}$: In the case where $X$ and $Y$ are causes with a joint effect, we call it a v-structure. In this structure, $X$ cannot influence $Y$.
 
-But can $X$ influence $Y$ if we were given evidence about $Z$? Let’s take a look at the three structures again. (green represents valid probabilistic influence and red represents invalid).
+But can $X$ influence $Y$ if we were given evidence about $Z$? Let’s take a look at the three structures again. ($\color{green}{\textbf{green}}$ represents valid probabilistic influence and $\color{red}{\textbf{red}}$ represents invalid).
 
-1. *Cascade (e.g. a & b)*: Since $X \rightarrow Z \rightarrow Y$ in (a), if $Z$ is already observed, then it does not matter what $X$ is, it can’t change the probability of $Y$. This means $X$ can no longer influence $Y$. Symmetrically, for $X \leftarrow Z \leftarrow Y$ in (b), if $Z$ is observed, then $X$ cannot influence $Y$.
-2. *Common parent (e.g. c)*:  Similarly, if we already observed the parent $Z$, then it really does not matter what any of the child values are; child nodes cannot influence one another. Therefore,  $X$ cannot influence $Y$.
-3. *V-structure (e.g. d)*: In the case where $X$ and $Y$ are causes with a joint effect $Z$ in a v-structure, if $Z$ is observed, then $X$ can influence $Y$ via intercausal reasoning. In fact, we don’t even need to observe $Z$. Just by observing any descendant of $Z$, it would result in evidential reasoning about $Z$, which in turn permits influence between $X$ and $Y$.
+1. $\color{red}{\textbf{Cascade (e.g. a and b)}}$: Since $X \rightarrow Z \rightarrow Y$ in (a), if $Z$ is already observed, then it does not matter what $X$ is, it can’t change the probability of $Y$. This means $X$ can no longer influence $Y$. Symmetrically, for $X \leftarrow Z \leftarrow Y$ in (b), if $Z$ is observed, then $X$ cannot influence $Y$.
+2. $\color{red}{\textbf{Common parent (e.g. c)}}$:  Similarly, if we already observed the parent $Z$, then it really does not matter what any of the child values are; child nodes cannot influence one another. Therefore,  $X$ cannot influence $Y$.
+3. $\color{green}{\textbf{V-structure (e.g. d)}}$: In the case where $X$ and $Y$ are causes with a joint effect $Z$ in a v-structure, if $Z$ is observed, then $X$ can influence $Y$ via intercausal reasoning. In fact, we don’t even need to observe $Z$. Just by observing any descendant of $Z$, it would result in evidential reasoning about $Z$, which in turn permits influence between $X$ and $Y$.
 
 ### Active Trails
 
@@ -237,7 +237,7 @@ In addition to sharing between models, we also often have **sharing within model
 
 ![new.png](images/new.png)
 
-For example, the process in which Selma’s genotype affects Selma’s blood type is presumably the same process by which Marge’s genotype affects Marge’s blood type and the same for Maggie, Lisa, Bart, Homer and everyone else (circled in red).  We might also realise that the genetic inheritance relationship by which Bart’s genotype is determined by the genotype of his two parents can be applied to everyone else (circled in blue). So, we have a lot of parameters that are shared within the model. What we would like to have is some way of constructing models that have this large amounts of shared structure, that allows us to both, construct very large models from a sparse parameterization (sharing within models) and also construct entire families of models from a single concise representation (sharing between models). This necessitates the creation of a general purpose graphical model that is not limited for a single application, i.e. a template model.
+For example, the process in which Selma’s genotype affects Selma’s blood type is presumably the same process by which Marge’s genotype affects Marge’s blood type and the same for Maggie, Lisa, Bart, Homer and everyone else (circled in $\color{red}{\textbf{red}}$).  We might also realise that the genetic inheritance relationship by which Bart’s genotype is determined by the genotype of his two parents can be applied to everyone else (circled in $\color{blue}{\textbf{blue}}$). So, we have a lot of parameters that are shared within the model. What we would like to have is some way of constructing models that have this large amounts of shared structure, that allows us to both, construct very large models from a sparse parameterization (sharing within models) and also construct entire families of models from a single concise representation (sharing between models). This necessitates the creation of a general purpose graphical model that is not limited for a single application, i.e. a template model.
 
 Template models are a convenient way of representing Bayesian networks that have a high amount of parameter sharing and structure. This gives rise to template variables $X(U_1, \dots, U_k)$ which are are instantiated (duplicated) multiple times throughout a unrolled network, for e.g. $Genotype(person)$ and $Phenotype(person)$ variables are both indexed by a person.
 
@@ -317,17 +317,17 @@ $$
 P(W', V', L', F', O'|W, V, L, F) = {\color{green}P(W'|W)P(V'|W, V)P(L'|V,L)P(F'|W,F)}{\color{orange}P(O'|L',F')}
 $$
 
-These CPDs represent the transition dynamics. Observe that we have dependencies that are across (in green) and within (in orange) time. These dependencies that are across time slices are represented by “inter-time-slice edges” and the dependencies that are within time slices are represented by “intra-time-slice edges” in the graph.
+These CPDs represent the transition dynamics. Observe that we have dependencies that are across (in $\color{green}{\textbf{green}}$) and within (in $\color{orange}{\textbf{orange}}$) time. These dependencies that are across time slices are represented by “inter-time-slice edges” and the dependencies that are within time slices are represented by “intra-time-slice edges” in the graph.
 
 ![Untitled](images/Untitled%208.png)
 
-A particular kind of inter-time-slice edges that’s worth highlighting are the edges that go from a variable to the same variable at the next time-step. These are called persistence edges (circled in blue) and they indicate the tendency of a variable to persist in state from one time point to another.
+A particular kind of inter-time-slice edges that’s worth highlighting are the edges that go from a variable to the same variable at the next time-step. These are called persistence edges (circled in $\color{blue}{\textbf{blue}}$) and they indicate the tendency of a variable to persist in state from one time point to another.
 
 ## Temporal Models - Hidden Markov Models
 
 Another simple yet extraordinary class of probabilistic temporal model is the class of Hidden Markov Models (HMM). Although these models can be viewed as a subclass of DBNs, we’ll see that they have their own type of structure that makes them particularly useful for a broad range of applications.
 
-An HMM is a Markov model in which each state generates an observation. We use $X_t$ to denote the hidden state at time-step $t$ and $Y_t$ to denote the observation at time-step $t$. If there are $K$ possible states, then $X_t \in \set{1, \dots, K}$. $Y_t$ might be a discrete symbol, $Y_t \in {1,\dots , L}$, or a feature-vector $Y_t \in \R^L$. 
+An HMM is a Markov model in which each state generates an observation. We use $X_t$ to denote the hidden state at time-step $t$ and $Y_t$ to denote the observation at time-step $t$. If there are $K$ possible states, then $X_t \in \set{1, \dots, K}$. $Y_t$ might be a discrete symbol, $Y_t \in {1,\dots , L}$, or a feature-vector $Y_t \in \mathcal{R}^L$. 
 
 The HMM really only has 2 probabilistic components, the transition model and the observation model. The transition model is characterized by a conditional multinomial distribution which tells us the probability of transitioning from state $i$ to state $j$ at any time $t$: $A(i, j) = P(X_t = j| X_{t-1} = i)$ where $A$ is a transition matrix (each row sums to one). $A$ is also often sparse; you can only transition from a state to a limited number of other states, there are many zero probability entries in the matrix.
 
