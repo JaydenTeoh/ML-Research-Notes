@@ -23,7 +23,8 @@ My interests in ML span areas such as:
 
 ## Latest updates
 
-- 01/01/2023 - [Bayesian Learning](https://github.com/JaydenTeoh/ML-Research-Notes/tree/main/Mathematics%20for%20ML/Advanced%20Concepts/Bayesian%20Learning) [Advanced Concepts]
+- 12/02/2024 - [Probabilistic Graphical Models: Bayesian Networks](https://github.com/JaydenTeoh/ML-Research-Notes/tree/main/Mathematics%20for%20ML/Advanced%20Concepts/Probabilistic%20Graphical%20Models/1.%20Bayesian%20Networks) [Advanced Concepts]
+- 01/01/2024 - [Bayesian Learning](https://github.com/JaydenTeoh/ML-Research-Notes/tree/main/Mathematics%20for%20ML/Advanced%20Concepts/Bayesian%20Learning) [Advanced Concepts]
 - 27/12/2023 - [Confidence Intervals and Hypothesis Testing](https://github.com/JaydenTeoh/ML-Research-Notes/tree/main/Mathematics%20for%20ML/Foundations/Probability%20and%20Statistics/4.%20Confidence%20Intervals%20and%20Hypothesis%20Testing) [Probability and Statistics]
 - 27/12/2023 - [Sampling and Point Estimation](https://github.com/JaydenTeoh/ML-Research-Notes/tree/main/Mathematics%20for%20ML/Foundations/Probability%20and%20Statistics/3.%20Sampling%20and%20Point%20Estimation) [Probability and Statistics]
 - 25/12/2023 - [Probability Distributions](https://github.com/JaydenTeoh/ML-research/tree/main/Mathematics%20for%20ML/Foundations/Probability%20and%20Statistics/2.%20Probability%20Distributions) [Probability and Statistics]
