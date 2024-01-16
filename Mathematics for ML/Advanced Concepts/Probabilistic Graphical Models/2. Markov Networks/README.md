@@ -68,8 +68,7 @@ $$
 From this decomposition, we can infer the pairwise Markov property from our student model, that is
 
 $$
-P \models (A {\perp\!\!\!\perp} C | B,D), \quad P \models (B {\perp\!\!\!\perp} D | A, C)
-
+P \models (A {\perp\kern-5pt\perp} C | B,D), \quad P \models (B {\perp\kern-5pt\perp} D | A, C)
 $$
 
 # Gibbs Distribution
