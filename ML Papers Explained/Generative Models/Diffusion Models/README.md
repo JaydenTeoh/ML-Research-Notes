@@ -220,7 +220,7 @@ $$
 Empirically, [Ho et al. (2020)](https://arxiv.org/abs/2006.11239) found that a simplified loss function without the weighting term performs better:
 
 $$
- L_{\text{simple}}  = \mathbb{E}_{x_0, \epsilon} \Big[\left \lVert{\epsilon}_0 - {\hat\epsilon}_{{\theta}}(x_t, t)\right\rVert^2 \Big]
+L_{\text{simple}}  = \mathbb{E}_{x_0, \epsilon} \Big[\|{\epsilon}_0 - {\hat{\epsilon}}_\theta(x_t, t \|^2 \Big]
 $$
 
 which is basically just the **mean squared error between the noise added in the forward process and the noise predicted by the model**!
