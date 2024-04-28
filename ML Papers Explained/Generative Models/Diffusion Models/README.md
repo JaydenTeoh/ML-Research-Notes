@@ -230,6 +230,11 @@ which is basically just the **mean squared error between the noise added in the 
 Training and sample algorithm from [Ho et al. (2020)](https://arxiv.org/abs/2006.11239)
 
 ## Summary
+To wrap up, diffusion models represent a fascinating approach to data generation and denoising tasks in the realm of deep learning. At their core, these models leverage a process called diffusion, which involves progressively applying Gaussian noise to an original sample distribution. The diffusion model then aims to learn the parameters that maximize the Variational Lower Bound (VLB) during the denoising step. 
+
+Notably, diffusion models often excel in terms of generalizability and training stability, steering clear of pitfalls like mode collapse commonly encountered by GANs. However, GANs are still considerably more computationally efficient compared to diffusion models. This is due to the fact that GANs can generate an image in a single forward pass but diffusion models rely on a long Markov chain of denoising steps.
+
+Still, diffusion models have proved their incredible capabilities in generating realistic samples. It's highly likely that we'll witness the emergence of even more powerful diffusion-based generative models, pushing the boundaries of generative modeling to new heights in the years ahead!
 
 ## References
 
