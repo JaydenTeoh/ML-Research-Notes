@@ -4,7 +4,7 @@ This is where I will be writing my personal notes on
 1. Mathematics of Machine Learning
 2. Machine Learning research papers
 
-View notes on Notion [here](https://jaydenmachinelearning.notion.site/)
+View notes on Notion [here](https://jaydenmachinelearning.notion.site/Jayden-s-Machine-Learning-Notes-25690dc8c35447048916d9ba76dabf40?pvs=4)
 
 ## Who am I and why am I doing this?
 
